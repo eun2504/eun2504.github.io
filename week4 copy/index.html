@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Week 4</title>
+    <link rel="stylesheet" href="general.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+
+        #container {
+            margin: auto;
+            background-color: #74C69D;
+            padding: 20px 70px;
+        }
+
+        #banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 50px 50px;
+        }
+
+        #banner .banner-text {
+            width: 45%;
+            text-align: left;
+            color: white;
+            width: 430px
+        }
+
+        #banner .image {
+            width: 55%;
+        }
+
+        .explorebutton button {
+            color: rgb(52, 52, 52);
+            padding: 13px 51px;
+            text-align: center;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+
+        }
+
+        .part2 {
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+        }
+
+        .heading {
+            color: #74C69D;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .logos img {
+            padding: 30px 40px;
+        }
+
+
+        .part3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 50px 50px;
+            gap: 50px;
+        }
+
+        .convo3 {
+            width: 55%;
+            margin: 80px 30px 0px 100px;
+        }
+
+        .text3 {
+            width: 45%;
+            text-align: left;
+            color: black;
+            margin: 80px 70px 0px 100px;
+            align-items: center;
+        }
+
+        .text3 h1 {
+            margin-right: 20px;
+        }
+
+        .text3 p {
+            color: gray;
+            font-weight: 350;
+        }
+
+        .part4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 50px;
+        }
+
+        .text4 {
+            width: 45%;
+            text-align: left;
+            color: black;
+            margin: 80px 100px 0px 70px;
+            align-items: center;
+        }
+
+        .text4 h1 {
+            margin-right: 20px;
+        }
+
+        .text4 p {
+            color: gray;
+            font-weight: 350;
+        }
+
+        .guy4 {
+            width: 55%;
+            margin: 80px 100px 0px 30px;
+        }
+
+        .team {
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 50px 0px;
+        }
+
+        .team-text {
+            text-align: center;
+        }
+
+        .team-images {
+            margin-top: 45px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0px 75px;
+            gap: 30px;
+        }
+
+        .team-images div {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 14px;
+            box-shadow: 2px 4px 8px 3px rgba(130, 130, 130, 0.5);
+            border-radius: 5px;
+        }
+
+        .team-images div img {
+            padding: 10px 26px;
+            width: 193px
+        }
+
+        .team-images div .team-info {
+            text-align: left;
+            box-shadow: none;
+        }
+
+        .team-images div h3 {
+            font-family: "crimson text", serif;
+            font-size: 26px;
+            margin-top: 3px;
+            margin-bottom: 5px;
+        }
+
+        .team-images div p {
+            font-weight: 350;
+            margin-bottom: 0px;
+        }
+
+        .view-team-button-container {
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+        }
+
+        .view-team-button {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 14px 36px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+        }
+
+        @media screen and (max-width: 768px) {
+            #container {
+                padding: 0 15px;
+            }
+
+            #navigation-bar {
+                margin-bottom: 60px;
+            }
+
+            #banner,
+            .part2,
+            .part3,
+            .part4,
+            .team,
+            .team-images {
+                margin: 0 !important;
+                padding: 0 15px !important;
+                box-sizing: border-box;
+            }
+
+            .body {
+                overflow-x: hidden;
+            }
+
+            #banner {
+                flex-direction: column-reverse;
+                width: 100%;
+                justify-content: center;
+                padding: 0;
+                text-align: center;
+            }
+
+            #banner .banner-text {
+                width: 100%;
+                text-align: left;
+                padding: 20px;
+            }
+
+            #banner .image {
+                width: 100%;
+                padding: 0;
+            }
+
+            .explorebutton {
+                margin-bottom: 20px;
+            }
+
+            .logos {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+            }
+
+            .part2 .text p,
+            .team-text .text p {
+                max-width: 80%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .part2 .learn-more-button {
+                margin: 40px auto;
+                display: block;
+            }
+
+            .part3 {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .part3 .text3 .learn-more-button {
+                margin-bottom: 80px;
+            }
+
+            .part3 .text3 {
+                margin-top: 0;
+            }
+
+            .part4 {
+                flex-direction: column-reverse;
+            }
+
+            .convo3,
+            .guy4 {
+                width: 100%;
+                margin: 5px 0;
+                text-align: center;
+            }
+
+            .text3,
+            .text4 {
+                width: 100%;
+                margin: 0;
+                text-align: left;
+            }
+
+            .team {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+
+            .team-text {
+                margin-bottom: 40px;
+            }
+
+            .team-images {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 20px;
+                justify-content: center;
+            }
+
+
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="navigation-bar">
+            <div class="logo"><img src="image/logo.png" width="190px"></div>
+
+            <div class="sections">
+                <div>Home</div>
+                <div>Portfolio</div>
+                <div>Services</div>
+                <div>Contact</div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="banner-text">
+                <h5> WELCOME</h5>
+                <h1>Lorem ipsum dolor sit amet consectetur </h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam
+                    nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste? </p>
+                <div class="explorebutton">
+                    <button>Explore</button>
+                </div>
+            </div>
+            <div class="image">
+                <div><img src="image/happyteam.png" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="part2">
+        <div class="part2-text">
+            <div class="heading">
+                <h5>PARTNERS</h5>
+            </div>
+            <h1>Lorem Ipsum Dolor</h1>
+            <div class="text">
+                <p>Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="logos">
+            <img src="image/google.png">
+            <img src="image/microsoft.png">
+            <img src="image/airbnb.png">
+            <img src="image/facebook.png">
+            <img src="image/spotify.png">
+        </div>
+
+        <button class="learn-more-button">Learn More</button>
+    </div>
+
+    <div class="part3">
+        <div class="convo3"><img src="image/3convo.png" width="100%"></div>
+        <div class="text3">
+            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam
+                nobis cum est eos
+                error ipsum, voluptate culpa nesciunt delectus iste? </p>
+            <button class="learn-more-button">Learn More</button>
+        </div>
+    </div>
+
+    <div class="part4">
+        <div class="text4">
+            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam
+                nobis cum est eos
+                error ipsum, voluptate culpa nesciunt delectus iste? </p>
+            <button class="learn-more-button">Learn More</button>
+        </div>
+        <div class="guy4"><img src="image/guy4.png" width="100%"></div>
+    </div>
+
+    <div class="team">
+        <div class="team-text">
+            <div class="heading">
+                <h5>TEAM</h5>
+            </div>
+            <h1>Our Talents</h1>
+            <div class="text">
+                <p>Lorem ipsum, dolor sit amet consectetur Suscipit nemo hic quos, ab,</p>
+            </div>
+        </div>
+        <div class="team-images">
+            <div class="peg">
+                <img src="image/peg.png">
+                <div class="team-info">
+                    <h3>Peg Legge</h3>
+                    <p>CEO</p>
+                </div>
+            </div>
+            <div class="richard">
+                <img src="image/richard.png">
+                <div class="team-info">
+                    <h3>Richard Guerra</h3>
+                    <p>CTO</p>
+                </div>
+            </div>
+            <div class="alexandra">
+                <img src="image/alexandra.png">
+                <div class="team-info">
+                    <h3>Alexandra Stolz</h3>
+                    <p>DESIGNER</p>
+                </div>
+            </div>
+            <div class="janet">
+                <img src="image/janet.png">
+                <div class="team-info">
+                    <h3>Janet Bray</h3>
+                    <p>DEVELOPER</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-team-button-container">
+            <button class="view-team-button">View Team</button>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer">
+            <div class="social-media">
+                <img src="image/fb.png">
+                <img src="image/insta.png">
+                <img src="image/twitter.png">
+                <img src="image/pinterest.png">
+                <img src="image/tiktok.png">
+                <img src="image/whatsapp.png">
+                <img src="image/youtube.png">
+            </div>
+            <div class="footer-text">© Start, 2022. All rights reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

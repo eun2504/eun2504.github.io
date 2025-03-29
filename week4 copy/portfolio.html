@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Week 4</title>
+    <link rel="stylesheet" href="general.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+
+        .portfolio-text {
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+        }
+
+        .heading {
+            color: #74C69D;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .text p {
+            margin: 10px auto;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 400;
+            line-height: 1.8;
+            width: 500px;
+        }
+
+        .works {
+            padding: 15px 0px
+        }
+
+        .works div {
+            display: flex;
+            justify-content: space-between;
+            margin: 60px 130px 0px;
+        }
+
+        .works div img {
+            width: 595px;
+        }
+
+        .button {
+            display: flex;
+            margin: 30px 0px 100px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .works {
+                margin-top: 40px;
+                margin-bottom: 0px;
+                padding: 0;
+            }
+
+
+            .works div {
+                flex-direction: column;
+                align-items: center;
+                margin: 15px 0px;
+            }
+
+            .works div img {
+                width: 100%;
+                margin-bottom: 70px;
+            }
+
+            .works div .row4 img:nth-child(2) {
+                margin-bottom: 0px;
+            }
+
+            .portfolio-text .text p,
+            .team-text .text p {
+                max-width: 80%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .button {
+                margin: 0 0 30px;
+
+            }
+
+            .row4 img:last-child {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="navigation-bar">
+            <div class="logo"><img src="image/logo.png" width="190px"></div>
+
+            <div class="sections">
+                <div>Home</div>
+                <div>Portfolio</div>
+                <div>Services</div>
+                <div>Contact</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-text">
+        <div class="heading">
+            <h5>WORKS</h5>
+        </div>
+        <h1>Portfolio</h1>
+        <div class="text">
+            <p>Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit.</p>
+        </div>
+    </div>
+
+    <div class="works">
+        <div class="row1">
+            <img src="image/work1.png">
+            <img src="image/work2.png">
+        </div>
+        <div class="row2">
+            <img src="image/work3.png">
+            <img src="image/work4.png">
+        </div>
+        <div class="row3">
+            <img src="image/work5.png">
+            <img src="image/work6.png">
+        </div>
+        <div class="row4">
+            <img src="image/work7.png">
+            <img src="image/work8.png">
+        </div>
+    </div>
+
+    <div class="button">
+        <button class="learn-more-button">Learn More</button>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer">
+            <div class="social-media">
+                <img src="image/fb.png">
+                <img src="image/insta.png">
+                <img src="image/twitter.png">
+                <img src="image/pinterest.png">
+                <img src="image/tiktok.png">
+                <img src="image/whatsapp.png">
+                <img src="image/youtube.png">
+            </div>
+            <div class="footer-text">© Start, 2022. All rights reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>
