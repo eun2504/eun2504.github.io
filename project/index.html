@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Closet Collective: Where Style Meets Self-Expression</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+
+        body {
+            background-color: #fffffc;
+        }
+
+        h1,
+        h2,
+        h4,
+        p {
+            font-family: 'josefin sans', sans-serif;
+            color: black;
+        }
+
+        h3 {
+            font-family: 'lexend', sans-serif;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #FFFFFC;
+            z-index: 1000;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo img {
+            width: 25px;
+        }
+
+        .sections {
+            display: flex;
+            gap: 20px;
+        }
+
+        .sections a {
+            text-decoration: none;
+            color: black;
+            font-family: 'lexend', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .sections a:nth-child(1):hover {
+            color: #A50100;
+        }
+
+        .sections a:nth-child(2):hover {
+            color: #023996;
+        }
+
+        .sections a:nth-child(3):hover {
+            color: #097D17;
+        }
+
+        .sections a:nth-child(4):hover {
+            color: #434343;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            height: 750px;
+            overflow: hidden;
+        }
+
+        .banner-top {
+            width: 100%;
+            position: absolute;
+            top: -10px;
+            overflow: hidden;
+
+        }
+
+        .banner-top img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .banner-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            width: 100%;
+            margin-bottom: 100px;
+        }
+
+        .banner-image {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            width: 35%;
+        }
+
+        .banner-image img {
+            display: flex;
+            width: 53%;
+        }
+
+        .banner-text {
+            display: flex;
+            flex-direction: column;
+            width: 65%;
+            text-align: left;
+            row-gap: 15px;
+        }
+
+        .banner-text h1 {
+            font-size: 100px;
+            text-transform: uppercase;
+            margin-right: 400px;
+            margin: 0;
+        }
+
+        .banner-text h4 {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .fashion-inspiration {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px 40px;
+            margin-bottom: 120px;
+        }
+
+        .fashion-inspiration-section1,
+        .fashion-inspiration-section2,
+        .fashion-inspiration-section3 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fashion-inspiration-section1 {
+            width: 40%;
+            row-gap: 60px;
+        }
+
+        .fashion-inspiration-section2 {
+            width: 25%;
+        }
+
+        .fashion-inspiration-section3 {
+            width: 35%;
+            row-gap: 15px;
+            position: relative;
+        }
+
+        .fashion-inspiration-section1 img {
+            width: 55%;
+            height: auto;
+        }
+
+        .fashion-inspiration-section1-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+        }
+
+        h2 {
+            display: flex;
+            font-size: 80px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        p {
+            display: flex;
+            font-size: 15px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .fashion-inspiration-section1-text p {
+            color: #A50100;
+        }
+
+        .fashion-inspiration-section2 img {
+            width: 90%;
+            height: auto;
+            position: relative;
+            top: 120px;
+        }
+
+        .fashion-inspiration-section3-image {
+            display: flex;
+            justify-content: right;
+            align-items: top;
+            margin-bottom: 45px;
+            width: 100%;
+        }
+
+        .fashion-inspiration-section3 img {
+            width: 70%;
+        }
+
+        .fashion-inspiration-section3-seemorebutton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 23px;
+            cursor: pointer;
+            margin-left: 42px;
+        }
+
+        .fashion-inspiration-section3-seemorebutton h3 {
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .fashion-inspiration-section3-seemorebutton img {
+            width: 35%;
+        }
+
+        .fashion-inspiration-section3-seemorebutton:hover img {
+            content: url('images/seemorearrowred.png');
+        }
+
+        .fashion-inspiration-section3-seemorebutton:hover h3 {
+            color: #A50100;
+        }
+
+        .fashion-inspiration-section3 .border-line {
+            width: 100%;
+            border-bottom: 2px solid black;
+        }
+
+        .fashion-inspiration-section3 .border-line-2 {
+            height: 60%;
+            border-left: 2px solid black;
+            position: absolute;
+            bottom: 47px;
+            left: 80px;
+        }
+
+        .mix-match {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px 40px;
+            margin-bottom: 120px;
+        }
+
+        .mix-match-section1 {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+        }
+
+        .mix-match-section2 {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+
+        .mix-match-section3 {
+            display: flex;
+            align-items: right;
+            justify-content: right;
+            flex-direction: column;
+            width: 45%;
+            row-gap: 20px;
+            position: relative;
+        }
+
+        .mix-match-section1 img {
+            width: 85%;
+        }
+
+        .mix-match-section2 img {
+            width: 80%;
+            position: relative;
+            top: 250px;
+            left: 30px;
+        }
+
+        .mix-match-section3-text {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin-bottom: 65px;
+        }
+
+        .mix-match-section3-text p {
+            color: #023996;
+        }
+
+        .mix-match-section3-image {
+            display: flex;
+            justify-content: right;
+            align-items: top;
+            width: 100%;
+            margin-bottom: 95px;
+        }
+
+        .mix-match-section3 img {
+            width: 85%;
+        }
+
+        .mix-match-section3-seemorebutton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 23px;
+            cursor: pointer;
+            margin-right: 120px;
+            margin-bottom: 120px;
+        }
+
+        .mix-match-section3-seemorebutton h3 {
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .mix-match-section3-seemorebutton img {
+            width: 35%;
+        }
+
+        .mix-match-section3 .border-line {
+            width: 67%;
+            border-bottom: 2px solid black;
+        }
+
+        .mix-match-section3 .border-line-2 {
+            height: 20%;
+            border-left: 2px solid black;
+            position: absolute;
+            bottom: 95px;
+            left: 60px
+        }
+
+        .mix-match-section3-seemorebutton:hover img {
+            content: url('images/seemorearrowblue.png');
+        }
+
+        .mix-match-section3-seemorebutton:hover h3 {
+            color: #023996;
+        }
+
+        .footer {
+            display: flex;
+            padding: 20px 40px;
+            background-color: #000000;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav-bar {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 30px;
+            padding: 5px;
+            margin-bottom: 40px;
+        }
+
+        .footer-nav-bar a {
+            text-decoration: none;
+            color: white;
+            font-family: 'lexend', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .footer-nav-bar a:nth-child(1):hover {
+            text-decoration: underline;
+        }
+
+        .footer-nav-bar a:nth-child(2):hover {
+            text-decoration: underline;
+        }
+
+        .footer-nav-bar a:nth-child(3):hover {
+            text-decoration: underline;
+        }
+
+        .footer-nav-bar a:nth-child(4):hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-copyright h4 {
+            font-size: 30px;
+            text-transform: uppercase;
+            margin: 0;
+            color: white;
+        }
+
+        .footer-copyright p {
+            font-size: 15px;
+            color: white;
+            margin: 0;
+        }
+
+        .follow-us {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+            width: 50%;
+            gap: 3px;
+        }
+
+        .follow-us-text p {
+            display: flex;
+            color: white;
+            font-size: 15px;
+        }
+
+        .social-med {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 15px;
+            width: 80px;
+        }
+
+        .social-med img {
+            height: 50%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="images/closetcollective.png" alt="Logo"></a>
+        </div>
+
+        <div class="sections">
+            <a href="fashion-inspiration.html">Fashion Inspiration</a>
+            <a href="mix-&-match.html">Mix & Match</a>
+            <a href="thrift-&-diy.html">Thrift & DIY</a>
+            <a href="about-us.html">About Us</a>
+        </div>
+
+    </div>
+
+    <div class="banner">
+        <div class="banner-top">
+            <img src="images/bgimg.png" alt="Banner Background">
+        </div>
+        <div class="banner-bottom">
+            <div class="banner-image">
+                <img src="images/bannerimg.png" alt="Banner Image">
+            </div>
+            <div class="banner-text">
+                <h1>Closet Collective</h1>
+                <h4>"Curated Fashion, Timeless Trends, and Everything In Between."</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="fashion-inspiration">
+        <div class="fashion-inspiration-section1">
+            <div class="fashion-inspiration-section1-image">
+                <img src="images/fashinsp1.png"
+                    alt="Vintage workwear meets modern street style with oversized denim, a cropped jacket, and classic sneakers.">
+            </div>
+            <div class="fashion-inspiration-section1-text">
+                <h2>Fashion Inspiration</h2>
+                <p>Lookbook, trends and celeb fits</p>
+            </div>
+        </div>
+
+        <div class="fashion-inspiration-section2">
+            <img src="images/fashinsp2.png"
+                alt="Grungy preppy mix with bold layers, chunky loafers, and a statement bandana.">
+        </div>
+
+        <div class="fashion-inspiration-section3">
+            <div class="fashion-inspiration-section3-image">
+                <img src="images/fashinsp3.png"
+                    alt="Sporty-meets-feminine street style with layered accessories, an oversized jersey, and a ruffled skirt.">
+            </div>
+            <div class="border-line"></div>
+            <div class="border-line-2"></div>
+            <div class="fashion-inspiration-section3-seemorebutton">
+                <h3>See More</h3>
+                <img src="images/seemorearrow.png" alt="Seemorearrow">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mix-match">
+        <div class="mix-match-section1">
+            <img src="images/mix&match1.png" alt="Preppy-casual: cardigan, shirt, skirt, jeans, layered style.">
+        </div>
+
+        <div class="mix-match-section2">
+            <img src="images/mix&match2.png"
+                alt="Urban streetwear collage: Carhartt jacket, graphic tee, wide-leg jeans, cap, sneakers.">
+        </div>
+
+        <div class="mix-match-section3">
+            <div class="mix-match-section3-text">
+                <h2>Mix & Match</h2>
+                <p>Master the art of styling</p>
+            </div>
+            <div class="mix-match-section3-image">
+                <img src="images/mix&match3.png"
+                    alt="Polo Ralph Lauren hoodie, graphic tank top, beanie, glasses, and necklace laid out for a styled outfit.">
+            </div>
+            <div class="border-line"></div>
+            <div class="border-line-2"></div>
+            <div class="mix-match-section3-seemorebutton">
+                <h3>See More</h3>
+                <img src="images/seemorearrow.png" alt="Seemorearrow">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-nav-bar">
+            <a href="fashion-inspiration.html">Fashion Inspiration</a>
+            <a href="mix-&-match.html">Mix & Match</a>
+            <a href="thrift-&-diy.html">Thrift & DIY</a>
+            <a href="about-us.html">About Us</a>
+        </div>
+        <div class="footer-copyright">
+            <h4>Closet Collective</h4>
+            <p>© 2025 Closet Collective. Stay stylish.</p>
+        </div>
+        <div class="follow-us">
+            <div class="follow-us-text">
+                <p>Follow Us At</p>
+            </div>
+            <div class="social-med">
+                <img src="images/insta.png" alt="Instagram">
+                <img src="images/pinterest.png" alt="Pinterest">
+                <img src="images/tiktok.png" alt="TikTok">
+                <img src="images/youtube.png" alt="Youtube">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
