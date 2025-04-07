@@ -4,8 +4,8 @@
 <head>
     <title>Closet Collective: Where Style Meets Self-Expression</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
         body {
             background-color: #fffffc;
@@ -230,6 +230,7 @@
             font-weight: 500;
             text-transform: uppercase;
             margin: 0;
+            font-family: 'lexend', sans-serif;
         }
 
         .fashion-inspiration-section3-seemorebutton img {
@@ -336,6 +337,7 @@
             font-weight: 500;
             text-transform: uppercase;
             margin: 0;
+            font-family: 'lexend', sans-serif;
         }
 
         .mix-match-section3-seemorebutton img {
@@ -419,6 +421,7 @@
             text-transform: uppercase;
             margin: 0;
             color: white;
+            cursor: pointer;
         }
 
         .footer-copyright p {
@@ -451,9 +454,96 @@
         }
 
         .social-med img {
+            cursor: pointer;
             height: 50%;
             margin: 0;
             padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px 20px;
+                flex-direction: column;
+            }
+
+            .logo {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .sections {
+                align-items: center;
+                gap: 10px;
+            }
+
+            .banner {
+                height:
+                    flex-direction: column;
+                text-align: center;
+            }
+
+            .banner-image {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .banner-text h1 {
+                font-size: 36px;
+            }
+
+            .banner-text h4 {
+                font-size: 16px;
+            }
+
+            .fashion-inspiration,
+            .mix-match {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 20px;
+            }
+
+            .fashion-inspiration-section1,
+            .fashion-inspiration-section2,
+            .fashion-inspiration-section3,
+            .mix-match-section1,
+            .mix-match-section2,
+            .mix-match-section3 {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            /* Adjust image sizes */
+            .fashion-inspiration-section1 img,
+            .fashion-inspiration-section2 img,
+            .fashion-inspiration-section3 img,
+            .mix-match-section1 img,
+            .mix-match-section2 img,
+            .mix-match-section3 img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Adjust footer layout */
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer.nav.bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer.copyright,
+            .follow-us {
+                width: 100%;
+            }
+
+            .social-med div img {
+                width: 30px;
+            }
         }
     </style>
 </head>

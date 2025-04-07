@@ -3,21 +3,324 @@
 
 <head>
     <title>Personal Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #F8F3D9;
+        }
+
+        .logo {
+            width: 50%;
+            text-align: left;
+
+        }
+
+        .logo img {
+            width: 5%;
+        }
+
+        .social-media {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 50%;
+            gap: 20px;
+        }
+
+        .social-media img {
+            height: 70%;
+        }
+
+        .background-image {
+            background-image: url('index images/bgimg.png');
+            background-size: contain;
+            background-repeat: repeat;
+            background-position: center;
+        }
+
+        .background {
+            margin: 0px 40px;
+            padding: 70px 0px;
+        }
+
+        .profile {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile img {
+            width: 15%;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-family: 'Calistoga';
+            letter-spacing: 2px;
+            font-weight: 400;
+            color: #EBE5C2;
+
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 20px;
+            color: #EBE5C2;
+        }
+
+        .profile p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #EBE5C2;
+            max-width: 65%;
+            margin: 0 auto;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 50px;
+            margin: 40px 0px;
+        }
+
+        .week1,
+        .week2,
+        .week3,
+        .week4,
+        .week7 {
+            background-color: #EBE5C2;
+            padding: 40px;
+            width: 25%;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .week {
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #2F56A2;
+        }
+
+
+        .projects h3 {
+            font-family: 'calistoga';
+            font-weight: 300;
+            font-size: 25px;
+            color: #2F56A2;
+        }
+
+        .projects img {
+            width: 20px;
+        }
+
+        .projects a {
+            font-family: 'Outfit', sans-serif;
+            display: block;
+            margin-top: 10px;
+            color: #2F56A2;
+            text-decoration: none;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 40px;
+            background-color: #F8F3D9;
+            gap: 20px;
+
+        }
+
+        .footer-social-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-social-media img {
+            height: 70%;
+        }
+
+        .footer-copyright p {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            font-size: 14px;
+            color: #2F56A2;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo,
+            .social-media {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .logo img {
+                width: 10%;
+                margin-bottom: 10px;
+            }
+
+            .social-media {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .background {
+                margin: 0 20px;
+                padding: 50px 0;
+            }
+
+            .profile img {
+                width: 150px;
+            }
+
+            .profile p {
+                max-width: 100%;
+                margin: 10px auto;
+            }
+
+            .projects {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .week1,
+            .week2,
+            .week3,
+            .week4,
+            .week7 {
+                width: 70%;
+                /* same width for all boxes on mobile */
+            }
+
+            .projects h3 {
+                font-size: 22px;
+            }
+
+            .projects img {
+                width: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <a href="week 1/exe1.html">Exe1</a>
-    <a href="week 1/exe2.html">Exe2</a>
-    <a href="week 1/exe3.html">Exe3</a>
-    <a href="week2/exe1.html">Exe1</a>
-    <a href="week2/exe2.html">Exe2</a>
-    <a href="week3/exe1.html">Exe1</a>
-    <a href="week3/exe2.html">Exe2</a>
-    <a href="week4/index.html">Index</a>
-    <a href="week4/portfolio.html">Portfolio</a>
-    <a href="week7/index.html">Index-responsive</a>
-    <a href="week7/portfolio.html">Portfolio-responsive</a>
+    <div class="container">
+        <div class="logo">
+            <img src="index images/logo.png" alt="Logo">
+        </div>
 
+        <div class="social-media">
+            <a href="https://www.pinterest.com/euniicelam/" target="_blank"> <img src="index images/pinterest.png"
+                    alt="Pinterest"></a>
+            <a href="https://www.instagram.com/euniicelam/" target="_blank"> <img src="index images/instagram.png"
+                    alt="Instagram"></a>
+            <a href="https://www.youtube.com/@euniicelam" target="_blank"> <img src="index images/youtube.png"
+                    alt="Youtube"></a>
+        </div>
+    </div>
+    <div class="background-image">
+        <div class="background">
+            <div class="profile">
+                <img src="index images/pfp.png" alt="Profile Picture">
+                <h1>Eunice Lam</h1>
+                <h2>Web Publishing</h2>
+                <p>Hi, I'm Eunice Lam! I'm a student studying in Dasein Academy of Art, currently in my 2nd year of my
+                    Diploma
+                    in Digital Media course. I love creating art and digital pages to showcase the things I am
+                    passionate
+                    about.
+                    Welcome to my personal page!</p>
+            </div>
+
+            <div class="projects">
+                <div class="week1">
+                    <div class="week">
+                        <h3><img src="index images/calendar.png"> Week 1 </h3>
+                    </div>
+                    <div class="exercises">
+                        <a href="week 1/exe1.html" target="_blank">Exercise 1</a>
+                        <a href="week 1/exe2.html" target="_blank">Exercise 2</a>
+                        <a href="week 1/exe3.html" target="_blank">Exercise 3</a>
+                    </div>
+                </div>
+                <div class="week2">
+                    <div class="week">
+                        <h3><img src="index images/calendar.png"> Week 2 </h3>
+                    </div>
+                    <div class="exercises">
+                        <a href="week2/exe1.html" target="_blank">Exercise 1</a>
+                        <a href="week2/exe2.html" target="_blank">Exercise 2</a>
+                    </div>
+                </div>
+                <div class="week3">
+                    <div class="week">
+                        <h3><img src="index images/calendar.png"> Week 3 </h3>
+                    </div>
+                    <div class="exercises">
+                        <a href="week3/exe1.html" target="_blank">Exercise 1</a>
+                        <a href="week3/exe2.html" target="_blank">Exercise 2</a>
+                    </div>
+                </div>
+                <div class="week4">
+                    <div class="week">
+                        <h3><img src="index images/calendar.png"> Week 4 </h3>
+                    </div>
+                    <div class="exercises">
+                        <a href="week4/index.html" target="_blank">Index</a>
+                        <a href="week4/portfolio.html" target="_blank">Portfolio</a>
+                    </div>
+                </div>
+                <div class="week7">
+                    <div class="week">
+
+                        <h3><img src="index images/calendar.png"> Week 7 </h3>
+                    </div>
+                    <div class="exercises">
+                        <a href="week7/index.html" target="_blank">Index-responsive</a>
+                        <a href="week7/portfolio.html" target="_blank">Portfolio-responsive</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-social-media">
+                <a href="https://www.pinterest.com/euniicelam/" target="_blank"> <img src="index images/pinterest.png"
+                        alt="Pinterest"></a>
+                <a href="https://www.instagram.com/euniicelam/" target="_blank"> <img src="index images/instagram.png"
+                        alt="Instagram"></a>
+                <a href="https://www.youtube.com/@euniicelam" target="_blank"> <img src="index images/youtube.png"
+                        alt="Youtube"></a>
+            </div>
+            <div class="footer-copyright">
+                <p> 2025 Eunice Lam. All rights reserved.</p>
+            </div>
+        </div>
 </body>
 
 </html>
