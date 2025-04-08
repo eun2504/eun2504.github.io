@@ -108,18 +108,18 @@
             display: flex;
             justify-content: right;
             align-items: center;
-            width: 35%;
+            width: 25%;
         }
 
         .banner-image img {
             display: flex;
-            width: 53%;
+            width: 70%;
         }
 
         .banner-text {
             display: flex;
             flex-direction: column;
-            width: 65%;
+            width: 60%;
             text-align: left;
             row-gap: 15px;
         }
@@ -127,7 +127,6 @@
         .banner-text h1 {
             font-size: 100px;
             text-transform: uppercase;
-            width: 70%;
             margin: 0;
         }
 
@@ -160,6 +159,7 @@
 
         .fashion-inspiration-section2 {
             width: 25%;
+            z-index: -10;
         }
 
         .fashion-inspiration-section3 {
@@ -182,7 +182,7 @@
 
         h2 {
             display: flex;
-            font-size: 80px;
+            font-size: 5.5vw;
             font-weight: 500;
             text-transform: uppercase;
             margin: 0;
@@ -190,7 +190,7 @@
 
         p {
             display: flex;
-            font-size: 20px;
+            font-size: 1.25vw;
             font-weight: 500;
             margin: 0;
         }
@@ -209,9 +209,7 @@
         .fashion-inspiration-section3-image {
             display: flex;
             justify-content: right;
-            align-items: top;
             margin-bottom: 45px;
-            width: 100%;
         }
 
         .fashion-inspiration-section3 img {
@@ -315,7 +313,6 @@
         .mix-match-section3-image {
             display: flex;
             justify-content: right;
-            align-items: top;
             width: 100%;
             margin-bottom: 95px;
         }
@@ -462,6 +459,78 @@
             padding: 0;
         }
 
+        @media (max-width:1000px) {
+            .banner {
+                height: 550px;
+            }
+
+            .banner-bottom {
+                position: relative;
+                bottom: -100px;
+            }
+
+            .banner-text h1 {
+                font-size: 70px;
+            }
+
+            .banner-text h4 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .fashion-inspiration {
+                margin-bottom: 60px;
+            }
+
+            .fashion-inspiration-section3-seemorebutton h3 {
+                font-size: 14px;
+            }
+
+            .fashion-inspiration-section3 .border-line {
+                width: 100%;
+                position: relative;
+                right: 0;
+                transform: translateX(-1%);
+            }
+
+            .fashion-inspiration-section3 .border-line-2 {
+                height: 70%;
+                bottom: 20px;
+                left: 30px;
+            }
+
+            .mix-match-section2 img {
+                width: 80%;
+                position: relative;
+                top: 100px;
+                left: 15px;
+            }
+
+            .mix-match-section3-text {
+                margin-bottom: 10px;
+            }
+
+            .mix-match-section3-image {
+                margin-bottom: 10px;
+            }
+
+            .mix-match-section3-seemorebutton {
+                margin-right: 0;
+                margin-left: 50px;
+            }
+
+            .mix-match-section3-seemorebutton h3 {
+                font-size: 14px;
+            }
+
+            .mix-match {
+                margin-bottom: 60px;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 align-items: center;
@@ -491,11 +560,6 @@
             }
 
             .banner-bottom {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                width: 100%;
                 position: relative;
                 bottom: -80px;
             }
@@ -520,10 +584,6 @@
 
             .banner-text h4 {
                 font-size: 12px;
-            }
-
-            h2 {
-                font-size: 30px;
             }
 
             p {
