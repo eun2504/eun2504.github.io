@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body {
+    background-color: #fffffc;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h4,
+p {
+    font-family: 'josefin sans', sans-serif;
+    color: black;
+}
+
+h3 {
+    font-family: 'lexend', sans-serif;
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    background-color: #FFFFFC;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+.logo img {
+    width: 25px;
+}
+
+.sections {
+    display: flex;
+    gap: 20px;
+}
+
+.sections a {
+    text-decoration: none;
+    color: black;
+    font-family: 'lexend', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.fashion-inspiration-dropdown-content,
+.mix-match-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFFFFC;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    z-index: 1;
+    min-width: 160px;
+    max-width: 160px;
+    width: fit-content
+}
+
+.fashion-inspiration-dropdown-content a,
+.mix-match-dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Lexend', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.sec:hover .fashion-inspiration-dropdown-content,
+.sec:hover .mix-match-dropdown-content {
+    display: block;
+}
+
+.fashion-inspiration-dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #A50100;
+}
+
+.mix-match-dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #023996;
+}
+
+.sec {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.mix-match-sec:hover .dropdown-content {
+    display: block;
+}
+
+.sections a:nth-child(1):hover {
+    color: #A50100;
+}
+
+.sections a:nth-child(2):hover {
+    color: #023996;
+}
+
+.sections a:nth-child(3):hover {
+    color: #097D17;
+}
+
+.sections a:nth-child(4):hover {
+    color: #434343;
+}
+
+.footer {
+    display: flex;
+    padding: 20px 40px;
+    background-color: #000000;
+    flex-wrap: wrap;
+}
+
+.footer-nav-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+
+.footer-nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-family: 'lexend', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.footer-nav-bar a:nth-child(1):hover {
+    text-decoration: underline;
+}
+
+.footer-nav-bar a:nth-child(2):hover {
+    text-decoration: underline;
+}
+
+.footer-nav-bar a:nth-child(3):hover {
+    text-decoration: underline;
+}
+
+.footer-nav-bar a:nth-child(4):hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-copyright h4 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-copyright p {
+    font-size: 15px;
+    color: white;
+    margin: 0;
+}
+
+.follow-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 50%;
+    gap: 3px;
+}
+
+.follow-us-text p {
+    display: flex;
+    color: white;
+    font-size: 15px;
+}
+
+.social-med {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+    width: 80px;
+}
+
+.social-med img {
+    cursor: pointer;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .sections {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .sec,
+    .sections a {
+        text-align: center;
+        max-width: 160px;
+    }
+
+    .fashion-inspiration-dropdown-content a,
+    .mix-match-dropdown-content a {
+        text-align: left;
+    }
+
+    .footer {
+        padding: 15px 20px;
+        gap: 0;
+    }
+
+    .footer-nav-bar {
+        width: 50%;
+        gap: 10px;
+        padding: 0;
+        flex-direction: column;
+        order: 1;
+    }
+
+    .footer-nav-bar a {
+        font-size: 10px;
+    }
+
+    .follow-us {
+        row-gap: 0px;
+        justify-content: flex-start;
+        order: 2;
+    }
+
+    .follow-us-text p {
+        font-size: 10px;
+    }
+
+    .footer-copyright {
+        order: 3;
+        width: 100%;
+        gap: 5px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-copyright h4 {
+        font-size: 15px;
+    }
+
+    .footer-copyright p {
+        font-size: 7px;
+        text-align: center;
+    }
+}

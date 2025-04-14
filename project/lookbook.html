@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lookbook - Fashion Inspiration | Closet Collective</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="general.css">
+    <style>
+        .banner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 100px;
+        }
+
+        .banner-top img {
+            width: 100%;
+            max-height: 400px;
+        }
+
+
+        .banner-bottom {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .banner-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            margin-left: 50px;
+        }
+
+        .banner-text h1 {
+            font-size: 6.5vw;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .banner-text h2 {
+            font-size: 3vw;
+            color: #A50100;
+            margin: 0;
+            margin-right: 250px;
+
+        }
+
+        .banner-image {
+            display: flex;
+            width: 50%;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .banner-image img {
+            width: 100%;
+            max-width: 580px;
+        }
+
+        .lookbook-container {
+            display: flex;
+            flex-direction: row;
+            padding: 40px 50px;
+            gap: 50px;
+        }
+
+        .cat-mobile {
+            display: none;
+        }
+
+        .categories {
+            padding: 0;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 15%;
+        }
+
+        .cat-sub {
+            padding: 0;
+        }
+
+        .cat-sub h6 {
+            color: #A50100;
+            text-transform: uppercase;
+            font-size: 0.78vw;
+            font-family: "josefin sans";
+            font-weight: 650;
+            margin-bottom: 5px;
+        }
+
+        .cat-header {
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .cat-header h3 {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.2vw;
+            ;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .cat-header::after {
+            content: '';
+            display: block;
+            width: auto;
+            height: 3px;
+            background-color: black;
+        }
+
+        .cat-content {
+            margin-top: 0;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+
+        .cat-content p {
+            font-size: 1vw;
+        }
+
+        .divider {
+            background-color: #A50100;
+            width: 2px;
+            height: auto;
+        }
+
+        .lookbook-pics {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 70px;
+        }
+
+        .lookbook-pics div {
+            width: 20%;
+            aspect-ratio: 2 / 4;
+            overflow: hidden;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        .lookbook-pics div i {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            font-size: 10px;
+        }
+
+        .pages-nav {
+            display: none;
+        }
+
+        .pic1 {
+            background-image: url('images/lookbook/lk1.png');
+        }
+
+        .pic2 {
+            background-image: url('images/lookbook/lk2.png');
+        }
+
+        .pic3 {
+            background-image: url('images/lookbook/lk3.png');
+        }
+
+        .pic4 {
+            background-image: url('images/lookbook/lk4.png');
+        }
+
+        .pic5 {
+            background-image: url('images/lookbook/lk5.png');
+        }
+
+        .pic6 {
+            background-image: url('images/lookbook/lk6.png');
+        }
+
+        .pic7 {
+            background-image: url('images/lookbook/lk7.png');
+        }
+
+        .pic8 {
+            background-image: url('images/lookbook/lk8.png');
+        }
+
+        .pic9 {
+            background-image: url('images/lookbook/lk9.png');
+        }
+
+        .pic10 {
+            background-image: url('images/lookbook/lk10.png');
+        }
+
+        .pic11 {
+            background-image: url('images/lookbook/lk11.png');
+        }
+
+        .pic12 {
+            background-image: url('images/lookbook/lk12.png');
+        }
+
+        .pic13 {
+            background-image: url('images/lookbook/lk13.png');
+        }
+
+        .pic14 {
+            background-image: url('images/lookbook/lk14.png');
+        }
+
+        .pic15 {
+            background-image: url('images/lookbook/lk15.png');
+        }
+
+        .pic16 {
+            background-image: url('images/lookbook/lk16.png');
+        }
+
+        .next a {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            text-decoration: none;
+            gap: 25px;
+            padding-right: 50px;
+            margin: 10px 0;
+        }
+
+        .next img {
+            width: 10%;
+        }
+
+        .next p {
+            font-size: 15px;
+            font-family: "lexend";
+            text-transform: uppercase;
+            color: black;
+        }
+
+        @media (max-width:1300px) {
+            .banner-text h2 {
+                margin-right: 210px;
+            }
+
+            .cat-sub h6 {
+                font-size: 1.1vw;
+            }
+
+            .cat-header h3 {
+                font-size: 1.6vw;
+            }
+
+            .cat-content p {
+                font-size: 1.4vw;
+            }
+
+            .categories {
+                width: 30%;
+            }
+
+        }
+
+        @media (max-width:1040px) {
+            .banner-text h2 {
+                margin-right: 200px;
+            }
+        }
+
+        @media (max-width:950px) {
+            .banner-text h2 {
+                margin-right: 180px;
+            }
+
+            .cat-sub h6 {
+                font-size: 1.3vw;
+            }
+
+            .cat-header h3 {
+                font-size: 1.7vw;
+            }
+
+            .cat-content p {
+                font-size: 1.5vw;
+            }
+
+            .categories {
+                width: 40%;
+            }
+
+        }
+
+        @media (max-width:950px) {
+            .banner-text h2 {
+                margin-right: 150px;
+            }
+        }
+
+        @media (max-width:780px) {
+            .banner-text h2 {
+                margin-right: 130px;
+            }
+        }
+
+        @media (max-width:768px) {
+            .banner {
+                gap: 20px
+            }
+
+            .banner-bottom {
+                flex-direction: column;
+            }
+
+            .banner-text {
+                width: 100%;
+                margin: 0;
+                align-items: flex-start;
+            }
+
+            .banner-text h1 {
+                font-size: 10vw;
+                margin-left: 50px;
+            }
+
+            .banner-text h2 {
+                font-size: 5vw;
+            }
+
+            .banner-image {
+                width: 100%;
+                justify-content: end;
+            }
+
+            .banner-image img {
+                width: 45%;
+            }
+
+            .categories {
+                display: none;
+            }
+
+            .divider {
+                display: none;
+            }
+
+            .lookbook-container {
+                flex-direction: column;
+                padding: 50px 15px 10px;
+            }
+
+            .cat-mobile {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+            }
+
+            .cat-mobile div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 55px;
+                border: 2px solid black;
+                cursor: pointer;
+            }
+
+            .cat-mobile h3 {
+                margin: 0;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            .lookbook-pics {
+                gap: 20px;
+                margin: 0 40px;
+                row-gap: 80px;
+            }
+
+            .lookbook-pics div {
+                width: calc(50% - 10px);
+            }
+
+            .lookbook-pics div i {
+                font-size: 25px;
+            }
+
+            .pages-nav {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .pages-nav span {
+                font-size: 10pxw;
+                cursor: pointer;
+                font-family: "lexend";
+            }
+
+            .pages-nav span:first-child {
+                font-weight: bold;
+                color: #A50100;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="images/closetcollective.png" alt="Logo"></a>
+        </div>
+
+        <div class="sections">
+            <div class="sec">
+                <a href="fashion-inspiration.html">Fashion Inspiration</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="fashion-inspiration-dropdown-content">
+                    <a href="lookbook.html">Lookbook</a>
+                    <a href="trends.html">Trends</a>
+                    <a href="celebrity-fits.html">celebrity Fits</a>
+                </div>
+            </div>
+            <div class="sec">
+                <a href="mix-&amp;-match.html">Mix &amp; Match</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="mix-match-dropdown-content">
+                    <a href="challenges.html">Challenges</a>
+                </div>
+            </div>
+            <a href="thrift-&amp;-diy.html">Thrift &amp; DIY</a>
+            <a href="about-us.html">About Us</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-top">
+            <img src="images/lookbookbg.jpeg"
+                alt="Black and white portrait of two models in structured, minimalist fashion.">
+        </div>
+        <div class="banner-bottom">
+            <div class="banner-text">
+                <h2>fashion inspiration</h2>
+                <h1>Lookbook</h1>
+            </div>
+            <div class="banner-image">
+                <img src="images/lookbookbanner.jpeg"
+                    alt="Close-up of hands wearing multiple silver rings and a digital watch stylized ring, styled with a red corduroy jacket.">
+            </div>
+        </div>
+    </div>
+    <div class="lookbook-container">
+        <div class="cat-mobile">
+            <div class="button1">
+                <h3>Category (all)</h3>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="button2">
+                <h3>Subcategory</h3>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="cat-sub">
+                <h6>Aesthetic categories</h6>
+            </div>
+            <div class="cat-header">
+                <h3>Classic Timeless</h3>
+            </div>
+            <div class="cat-content">
+                <p>Minimalist</p>
+                <p>Old Money</p>
+            </div>
+            <div class="cat-header">
+                <h3>Street &amp; Urban</h3>
+            </div>
+            <div class="cat-content">
+                <p>Streetwear</p>
+                <p>Y2K</p>
+                <p>Grunge</p>
+                <p>Skater Style</p>
+            </div>
+            <div class="cat-header">
+                <h3>Feminine &amp; Soft</h3>
+            </div>
+            <div class="cat-content">
+                <p>Balletcore</p>
+                <p>Coquette</p>
+                <p>Cottage Core</p>
+                <p>Mori Kei</p>
+            </div>
+            <div class="cat-header">
+                <h3>Edgy &amp; Alternative</h3>
+            </div>
+            <div class="cat-content">
+                <p>Biker</p>
+                <p>Punk</p>
+            </div>
+            <div class="cat-header">
+                <h3>Vintage &amp; Retro</h3>
+            </div>
+            <div class="cat-content">
+                <p>Boho/Hippie</p>
+                <p>Light/Dark Academia</p>
+                <p>Retro</p>
+            </div>
+            <div class="cat-sub">
+                <h6>Others</h6>
+            </div>
+            <div class="cat-header">
+                <h3>Seasonal</h3>
+            </div>
+            <div class="cat-content">
+                <p>Spring</p>
+                <p>Summer</p>
+                <p>Fall</p>
+                <p>Winter</p>
+            </div>
+            <div class="cat-header">
+                <h3>Occasion</h3>
+            </div>
+            <div class="cat-content">
+                <p>Casual</p>
+                <p>Formal</p>
+                <p>Party</p>
+                <p>Date Night</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="lookbook-pics">
+            <div class="pic1">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic2">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic3">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic4">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic5">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic6">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic7">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic8">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic9">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic10">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic11">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic12">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic13">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic14">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic15">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+            <div class="pic16">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+        </div>
+        <div class="pages-nav">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+        </div>
+    </div>
+
+    <div class="next">
+        <a href="trends.html">
+            <p>trends</p>
+            <img src="images/seemorearrow.png">
+        </a>
+    </div>
+    <div class="footer">
+        <div class="footer-nav-bar">
+            <a href="fashion-inspiration.html">Fashion Inspiration</a>
+            <a href="mix-&amp;-match.html">Mix &amp; Match</a>
+            <a href="thrift-&-diy.html">Thrift &amp; DIY</a>
+            <a href="about-us.html">About Us</a>
+        </div>
+        <div class="footer-copyright">
+            <h4>Closet Collective</h4>
+            <p>© 2025 Closet Collective. Stay stylish.</p>
+        </div>
+        <div class="follow-us">
+            <div class="follow-us-text">
+                <p>Follow Us At</p>
+            </div>
+            <div class="social-med">
+                <img src="images/insta.png" alt="Instagram">
+                <img src="images/pinterest.png" alt="Pinterest">
+                <img src="images/tiktok.png" alt="TikTok">
+                <img src="images/youtube.png" alt="Youtube">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

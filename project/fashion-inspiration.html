@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Fashion Inspiration | Closet Collective</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="general.css">
+    <style>
+        .banner {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 40px;
+        }
+
+        .banner-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .banner-text {
+            width: 60%;
+            padding-top: 40px;
+        }
+
+        .banner-top h1 {
+            font-size: 6.5vw;
+            text-transform: uppercase;
+        }
+
+        .banner-image {
+            width: 40%;
+        }
+
+        .banner-image img {
+            width: 50%;
+        }
+
+        .banner-bottom {
+            height: 290px;
+        }
+
+        .banner-bottom img {
+            width: 40%;
+            position: relative;
+            top: -85px;
+        }
+
+        .subpages {
+            display: flex;
+            flex-direction: column;
+            padding: 110px 0px;
+            gap: 140px;
+        }
+
+        .lookbook,
+        .trends,
+        .celebrity-fits {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            position: relative;
+            min-height: 37vw;
+            background-size: cover;
+        }
+
+        .lookbook {
+            background-image: url("images/lookbook.jpeg");
+        }
+
+        .trends {
+            background-image: url("images/trends.jpeg");
+        }
+
+        .celebrity-fits {
+            background-image: url("images/celebrityfits.jpeg");
+        }
+
+        .subpages a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .subpages a .lookbook,
+        .subpages a .trends,
+        .subpages a .celebrity-fits {
+            transition: filter 0.3s ease;
+        }
+
+        .subpages a:hover .lookbook,
+        .subpages a:hover .trends,
+        .subpages a:hover .celebrity-fits {
+            filter: brightness(70%);
+            cursor: pointer;
+        }
+
+        .lookbook-text,
+        .trends-text,
+        .celebrity-fits-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .lookbook-text h2,
+        .trends-text h2,
+        .celebrity-fits-text h2 {
+            color: white;
+            text-transform: uppercase;
+            font-size: 3vw;
+            text-align: center;
+            position: relative;
+            padding-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .lookbook-text h2::after,
+        .trends-text h2::after,
+        .celebrity-fits-text h2::after {
+            content: '';
+            display: block;
+            width: 180px;
+            height: 1px;
+            background-color: white;
+            margin: 8px auto 0 auto;
+        }
+
+        @media (max-width: 1400px) {
+            .banner-bottom img {
+                top: -65px;
+            }
+        }
+
+        @media (max-width: 1150px) {
+            .banner-bottom img {
+                top: -45px;
+            }
+
+            .banner-bottom {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-bottom img {
+                top: -25px;
+            }
+
+            .banner-bottom {
+                height: 180px;
+            }
+
+            .subpages {
+                padding: 50px 0px;
+                gap: 70px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .banner-bottom {
+                height: 130px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .banner-bottom {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="images/closetcollective.png" alt="Logo"></a>
+        </div>
+
+        <div class="sections">
+            <div class="sec">
+                <a href="fashion-inspiration.html">Fashion Inspiration</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="fashion-inspiration-dropdown-content">
+                    <a href="lookbook.html">Lookbook</a>
+                    <a href="trends.html">Trends</a>
+                    <a href="celebrity-fits.html">celebrity Fits</a>
+                </div>
+            </div>
+            <div class="sec">
+                <a href="mix-&amp;-match.html">Mix &amp; Match</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="mix-match-dropdown-content">
+                    <a href="challenges.html">Challenges</a>
+                </div>
+            </div>
+            <a href="thrift-&amp;-diy.html">Thrift &amp; DIY</a>
+            <a href="about-us.html">About Us</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-top">
+            <div class="banner-text">
+                <h1>Fashion<br>Inspiration</h1>
+            </div>
+            <div class="banner-image">
+                <img src="images/fashbannergirl.png"
+                    alt="Girl wearing layered street style with plaid coat, ruffled denim skirt, and chunky shoes walking towards the right">
+            </div>
+        </div>
+        <div class="banner-bottom">
+            <img src="images/fashbannershoes.jpeg" alt="Black Mary Janes with chunky heels and ruffled red socks">
+        </div>
+    </div>
+    <div class="subpages">
+        <a href="lookbook.html">
+            <div class="lookbook">
+                <div class="lookbook-text">
+                    <h2>lookbook</h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="trends.html">
+            <div class="trends">
+                <div class="trends-text">
+                    <h2>trends</h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="celebrity-fits.html">
+            <div class="celebrity-fits">
+                <div class="celebrity-fits-text">
+                    <h2>celebrity fits</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-nav-bar">
+            <a href="fashion-inspiration.html">Fashion Inspiration</a>
+            <a href="mix-&amp;-match.html">Mix &amp; Match</a>
+            <a href="thrift-&amp;-diy.html">Thrift &amp; DIY</a>
+            <a href="about-us.html">About Us</a>
+        </div>
+        <div class="footer-copyright">
+            <h4>Closet Collective</h4>
+            <p>© 2025 Closet Collective. Stay stylish.</p>
+        </div>
+        <div class="follow-us">
+            <div class="follow-us-text">
+                <p>Follow Us At</p>
+            </div>
+            <div class="social-med">
+                <img src="images/insta.png" alt="Instagram">
+                <img src="images/pinterest.png" alt="Pinterest">
+                <img src="images/tiktok.png" alt="TikTok">
+                <img src="images/youtube.png" alt="Youtube">
+            </div>
+        </div>
+    </div>
+</body>
