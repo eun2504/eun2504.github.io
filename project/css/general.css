@@ -79,8 +79,8 @@ h3 {
     overflow-wrap: break-word;
 }
 
-.fs-sec:hover .fashion-inspiration-dropdown-content,
-.mm-sec:hover .mix-match-dropdown-content {
+.sec:hover .fashion-inspiration-dropdown-content,
+.sec:hover .mix-match-dropdown-content {
     display: block;
 }
 
@@ -94,20 +94,11 @@ h3 {
     color: #023996;
 }
 
-.fs-sec,
-.mm-sec {
+.sec {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: relative;
-}
-
-.fs-sec a:hover {
-    color: #A50100;
-}
-
-.mm-sec a:hover {
-    color: #023996;
 }
 
 .mix-match-sec:hover .dropdown-content {

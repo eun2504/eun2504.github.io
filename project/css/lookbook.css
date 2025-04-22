@@ -362,7 +362,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        padding: 10px 55px;
+        padding: 10px 70px;
         border: 2px solid black;
         cursor: pointer;
     }
