@@ -14,29 +14,40 @@
         <div class="logo">
             <a href="index.html"><img src="images/closetcollective.png" alt="Logo"></a>
         </div>
+
         <div class="hamburger-menu-toggle">
+            <i class="fa-solid fa-bars"></i>
             <p>Menu</p>
         </div>
+
         <div class="sections">
+            <img src="images/close.png" alt="Close" class="close">
+
             <div class="sec">
-                <img src="images/close.png" alt="Close" class="close">
                 <a href="fashion-inspiration.html">Fashion Inspiration</a>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
                 <div class="fashion-inspiration-dropdown-content">
                     <a href="lookbook.html">Lookbook</a>
                     <a href="trends.html">Trends</a>
-                    <a href="celebrity-fits.html">celebrity Fits</a>
+                    <a href="celebrity-fits.html">Celebrity Fits</a>
                 </div>
             </div>
+
             <div class="sec">
                 <a href="mix-&amp;-match.html">Mix &amp; Match</a>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
                 <div class="mix-match-dropdown-content">
                     <a href="challenges.html">Challenges</a>
                 </div>
             </div>
-            <a href="thrift-&amp;-diy.html">Thrift &amp; DIY</a>
-            <a href="about-us.html">About Us</a>
+
+            <div class="sec">
+                <a href="thrift-&amp;-diy.html">Thrift &amp; DIY</a>
+            </div>
+
+            <div class="sec">
+                <a href="about-us.html">About Us</a>
+            </div>
         </div>
     </div>
 
@@ -140,6 +151,19 @@
             </div>
         </div>
     </div>
+    <script>
+        const menuToggle = document.querySelector('.hamburger-menu-toggle');
+        const sections = document.querySelector('.sections');
+        const closeButton = document.querySelector('.close');
+
+        menuToggle.addEventListener('click', () => {
+            sections.classList.add('open');
+        });
+
+        closeButton.addEventListener('click', () => {
+            sections.classList.remove('open');
+        });
+    </script>
 </body>
 
 </html>
