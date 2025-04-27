@@ -166,7 +166,7 @@ p {
 }
 
 .fashion-inspiration-section3-seemorebutton:hover img {
-    content: url('images/seemorearrowred.png');
+    content: url('../images/seemorearrowred.png');
 }
 
 .fashion-inspiration-section3-seemorebutton:hover h3 {
@@ -285,7 +285,7 @@ p {
 }
 
 .mix-match-section3-seemorebutton:hover img {
-    content: url('images/seemorearrowblue.png');
+    content: url('../images/seemorearrowblue.png');
 }
 
 .mix-match-section3-seemorebutton:hover h3 {
