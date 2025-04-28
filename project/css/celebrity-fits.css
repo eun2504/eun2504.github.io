@@ -26,7 +26,7 @@
     font-size: 3vw;
     color: #A50100;
     margin: 0;
-    margin-right: 600px;
+    margin-right: 35vw;
     font-family: "josefin sans", sans-serif;
 }
 
@@ -40,6 +40,152 @@
     width: 100%;
 }
 
+.pop-out {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fffffc;
+    position: fixed;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: 9999;
+}
+
+.pop-out.show {
+    display: flex !important;
+}
+
+.celeb {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.popout-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popout-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close img {
+    width: 50%;
+}
+
+.pop-out .close {
+    width: 7vw;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.popout-text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: 4vw;
+}
+
+.popout-text h2 {
+    font-size: 2vw;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.popout-text p {
+    font-size: 1.1vw;
+    font-weight: 500;
+    color: #A50100;
+    margin: 0;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.recreate-text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 8%;
+}
+
+.recreate-text h2 {
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 10px;
+}
+
+.outfit-breakdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 10vw;
+    width: 75%;
+    border-top: 2px solid #A50100;
+    gap: 10px;
+}
+
+.outfit-breakdown h3 {
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-family: "lexend";
+    color: #A50100;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.outfit-breakdown li {
+    font-family: "josefin sans", sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #434343;
+    text-align: left;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.recreate-images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.recreate-images img {
+    width: 12%;
+    height: auto;
+}
+
+.rec-mobile {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rec-mobile img {
+    width: 12%;
+    height: auto;
+}
+
 .celebrity-fits {
     display: flex;
     flex-direction: row;
@@ -47,12 +193,14 @@
     margin: 100px 50px;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    row-gap: 70px;
 }
 
 .celebs {
     display: flex;
     flex-direction: column;
-    width: 33.3%;
+    width: 30%;
     justify-content: center;
     align-items: center;
 }
@@ -66,6 +214,7 @@
 .image {
     width: 70%;
     align-items: center;
+    justify-content: center;
 }
 
 .image img {
@@ -76,7 +225,7 @@
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    margin-left: 70px;
+    margin-left: 6vw;
 }
 
 .text h2 {
@@ -105,6 +254,7 @@
     margin: 0;
     margin-left: 50px;
     gap: 10px;
+    cursor: pointer;
 }
 
 .button p {
@@ -116,4 +266,144 @@
 .button img {
     width: 15%;
     height: 50%;
+}
+
+
+.back {
+    width: 50%;
+}
+
+.back a {
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-decoration: none;
+    gap: 25px;
+    padding-left: 50px;
+    margin: 10px 0;
+}
+
+.back img {
+    width: 20%;
+    rotate: 180deg;
+}
+
+.back p {
+    font-size: 15px;
+    font-family: "lexend";
+    text-transform: uppercase;
+    color: black;
+}
+
+@media (max-width: 1000px) {
+    .celebrity-fits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+        gap: 30px 20px;
+        padding: 0 30px;
+        justify-items: center;
+    }
+
+    .celebs {
+        width: 100%;
+    }
+
+    .recreate-images {
+        display: none;
+    }
+
+    .rec-mobile {
+        display: flex;
+        margin-top: 0px;
+    }
+
+    .pop-out {
+        height: 65vw;
+        bottom: 3vw;
+    }
+
+    .popout-text {
+        margin-left: 55px;
+    }
+
+    .popout-text h2 {
+        font-size: 3vw;
+    }
+
+    .popout-text p {
+        font-size: 1.5vw;
+        margin-bottom: 0;
+    }
+
+    .recreate {
+        height: 100%
+    }
+
+    .recreate-text {
+        margin-top: 10%;
+        margin-right: 20%;
+    }
+
+    .recreate-text h2 {
+        font-size: 5vw;
+        letter-spacing: 10px;
+        flex-wrap: wrap;
+    }
+
+    .outfit-breakdown {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .outfit-breakdown h3 {
+        font-size: 2vw;
+    }
+
+    .outfit-breakdown li {
+        font-size: 1.7vw;
+    }
+
+    .celeb {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .celeb img {
+        width: 100%;
+    }
+
+    .text h2 {
+        font-size: 2.5vw;
+    }
+
+    .text p {
+        font-size: 1.5vw;
+    }
+
+    .button p {
+        font-size: 1.5vw;
+    }
+
+    .celebs:nth-child(5),
+    .celebs:nth-child(8) {
+        flex-direction: column;
+    }
+
+    .celebs:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 768px) {
+    .celebrity-fits {
+        padding: 0px;
+        margin: 50px 20px;
+    }
+
+    .pop-out {
+        bottom: 20%;
+
+    }
 }

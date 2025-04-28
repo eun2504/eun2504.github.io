@@ -50,15 +50,17 @@ h3 {
 }
 
 .sections.open {
-    right: 0;
+    transform: translateX(0);
 }
 
 .close {
     position: absolute;
     top: 20px;
-    right: 50px;
+    right: 20px;
     cursor: pointer;
-    width: 50px;
+    width: auto;
+    line-height: 1;
+    color: black;
 }
 
 .sections {
@@ -67,36 +69,29 @@ h3 {
     position: fixed;
     background-color: #FFFFFC;
     top: 0;
-    right: -150%;
+    right: 0;
     width: 100%;
     height: 100%;
     z-index: 999;
-    transition: right 0.3s ease;
-    padding: 50px 50px;
-    align-items: center;
-    justify-self: center;
+    transition: transform 0.3s ease;
+    padding: 50px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(100%);
 }
 
 .sec,
 .sections a {
     text-align: left;
     width: 100%;
-}
-
-.sec {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
     margin: 20px 0;
-    position: relative;
-    text-align: left;
 }
 
 .sections a {
     text-decoration: none;
     color: black;
     font-family: 'josefin sans', sans-serif;
-    font-size: 5vw;
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
@@ -110,27 +105,28 @@ h3 {
 .fashion-inspiration-dropdown-content,
 .mix-match-dropdown-content {
     display: none;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 10px;
     background-color: #FFFFFC;
     z-index: 1;
-    width: fit-content;
-    position: absolute;
-    top: 100%;
+    width: 100%;
+    position: static;
+    padding-left: 20px;
 }
 
 .fashion-inspiration-dropdown-content a,
 .mix-match-dropdown-content a {
     color: black;
-    padding: 10px 16px;
+    padding: 10px 0;
     text-decoration: none;
     display: block;
     font-family: 'Lexend', sans-serif;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1em;
     box-sizing: border-box;
     white-space: normal;
     overflow-wrap: break-word;
+    text-align: left;
 }
 
 .sec a:nth-child(1):hover {
@@ -248,74 +244,18 @@ h3 {
         text-align: center;
     }
 
+    .hamburger-menu-toggle {
+        display: flex;
+        /* Make it visible on mobile */
+        align-items: center;
+    }
+
     .hamburger-menu-toggle i {
         display: flex;
-        font-size: 30px;
+        font-size: 2em;
     }
 
     .hamburger-menu-toggle p {
         display: none;
-    }
-
-    .sections {
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 0px;
-    }
-
-    .sec,
-    .sections a {
-        text-align: center;
-        max-width: 160px;
-    }
-
-    .fashion-inspiration-dropdown-content a,
-    .mix-match-dropdown-content a {
-        text-align: center;
-    }
-
-    .footer {
-        padding: 15px 20px;
-        gap: 0;
-    }
-
-    .footer-nav-bar {
-        width: 50%;
-        gap: 10px;
-        padding: 0;
-        flex-direction: column;
-        order: 1;
-    }
-
-    .footer-nav-bar a {
-        font-size: 10px;
-    }
-
-    .follow-us {
-        row-gap: 0px;
-        justify-content: flex-start;
-        order: 2;
-    }
-
-    .follow-us-text p {
-        font-size: 10px;
-    }
-
-    .footer-copyright {
-        order: 3;
-        width: 100%;
-        gap: 5px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-copyright h4 {
-        font-size: 15px;
-    }
-
-    .footer-copyright p {
-        font-size: 7px;
-        text-align: center;
     }
 }
