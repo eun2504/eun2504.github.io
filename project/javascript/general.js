@@ -1,32 +1,46 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const hamburgerMenuToggle = document.querySelector('.hamburger-menu-toggle');
-    const sections = document.querySelector('.sections');
-    const barsIcon = hamburgerMenuToggle.querySelector('.fa-solid.fa-bars');
-    const timesIcon = document.createElement('i');
+    const toggleButton = document.getElementById("menu-toggle");
+    const menu = document.querySelector(".sections");
+    const hamburgerIcon = toggleButton.querySelector(".hamburger-menu-icon");
+    const closeButton = document.querySelector(".close");
 
-    timesIcon.classList.add('fa-solid', 'fa-times');
-    timesIcon.style.display = 'none';
-    hamburgerMenuToggle.appendChild(timesIcon);
+    const toggleMenu = () => {
+        menu.classList.toggle("open");
+    };
 
-    hamburgerMenuToggle.addEventListener('click', function () {
-        sections.classList.toggle('open');
+    if (toggleButton) {
+        toggleButton.addEventListener('click', toggleMenu);
+    }
 
-        // Toggle the visibility of the icons
-        if (sections.classList.contains('open')) {
-            if (barsIcon) barsIcon.style.display = 'none';
-            if (timesIcon) timesIcon.style.display = 'flex';
-        } else {
-            if (barsIcon) barsIcon.style.display = 'flex';
-            if (timesIcon) timesIcon.style.display = 'none';
-        }
-    });
-
-    const closeMenuIcon = sections.querySelector('.close');
-    if (closeMenuIcon) {
-        closeMenuIcon.addEventListener('click', function () {
-            sections.classList.remove('open'); // This line removes the 'open' class
-            if (barsIcon) barsIcon.style.display = 'flex';
-            if (timesIcon) timesIcon.style.display = 'none';
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            menu.classList.remove("open");
         });
     }
+
+    const sectionsWithDropdown = document.querySelectorAll('.sections .sec:has(.dropdown)');
+
+    sectionsWithDropdown.forEach(section => {
+        const link = section.querySelector('a');
+        const desktopChevron = section.querySelector('.dropdown > .desktop-chevron');
+        const mobileChevron = section.querySelector('.mobile-only-chevron');
+        const dropdownContent = section.querySelector('.dropdown > div');
+
+        const toggleSubmenu = (event) => {
+            if (desktopChevron) {
+                desktopChevron.classList.toggle('rotate');
+            }
+            if (mobileChevron) {
+                mobileChevron.classList.toggle('rotate');
+            }
+            dropdownContent.classList.toggle('show');
+        };
+
+        if (desktopChevron) {
+            desktopChevron.addEventListener('click', toggleSubmenu);
+        }
+        if (mobileChevron) {
+            mobileChevron.addEventListener('click', toggleSubmenu);
+        }
+    });
 });

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Thrift &amp; DIY | Closet Collective</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="css/general.css">
 </head>
 
 <body>
@@ -13,31 +13,51 @@
         <div class="logo">
             <a href="index.html"><img src="images/closetcollective.png" alt="Logo"></a>
         </div>
-
-        <div class="hamburger-menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-            <p>Menu</p>
+        <div class="hamburger-menu-toggle" id="menu-toggle">
+            <div class="hamburger-menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="hamburger-menu-text">
+                <p>Menu</p>
+            </div>
         </div>
+
         <div class="sections">
+            <img src="images/close.png" alt="Close" class="close">
             <div class="sec">
-                <img src="images/close.png" alt="Close" class="close">
-                <a href="fashion-inspiration.html">Fashion Inspiration</a>
-                <i class="fa-solid fa-chevron-down"></i>
-                <div class="fashion-inspiration-dropdown-content">
-                    <a href="lookbook.html">Lookbook</a>
-                    <a href="trends.html">Trends</a>
-                    <a href="celebrity-fits.html">celebrity Fits</a>
+                <div class="title-sec">
+                    <a href="fashion-inspiration.html">Fashion Inspiration</a>
+                    <i class="fa-solid fa-chevron-down chevron-icon mobile-only-chevron"
+                        id="chevron-fashion-mobile"></i>
+                </div>
+                <div class="dropdown">
+                    <i class="fa-solid fa-chevron-down chevron-icon desktop-chevron" id="chevron-fashion"></i>
+                    <div class="fashion-inspiration-dropdown-content" id="dropdown-fashion">
+                        <a href="lookbook.html">Lookbook</a>
+                        <a href="trends.html">Trends</a>
+                        <a href="celebrity-fits.html">Celebrity Fits</a>
+                    </div>
                 </div>
             </div>
             <div class="sec">
-                <a href="mix-&amp;-match.html">Mix &amp; Match</a>
-                <i class="fa-solid fa-chevron-down"></i>
-                <div class="mix-match-dropdown-content">
-                    <a href="challenges.html">Challenges</a>
+                <div class="title-sec">
+                    <a href="mix-&-match.html">Mix &amp; Match</a>
+                    <i class="fa-solid fa-chevron-down chevron-icon mobile-only-chevron"
+                        id="chevron-mixmatch-mobile"></i>
+                </div>
+                <div class="dropdown">
+                    <i class="fa-solid fa-chevron-down chevron-icon desktop-chevron" id="chevron-mixmatch"></i>
+                    <div class="mix-match-dropdown-content" id="dropdown-mixmatch">
+                        <a href="challenges.html">Challenges</a>
+                    </div>
                 </div>
             </div>
-            <a href="thrift-&amp;-diy.html">Thrift &amp; DIY</a>
-            <a href="about-us.html">About Us</a>
+            <div class="sec">
+                <a href="thrift-&-diy.html">Thrift &amp; DIY</a>
+            </div>
+            <div class="sec">
+                <a href="about-us.html">About Us</a>
+            </div>
         </div>
     </div>
 
@@ -64,6 +84,7 @@
             </div>
         </div>
     </div>
+    <script src="javascript/general.js"></script>
 </body>
 
 </html>
