@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/lookbook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 </head>
 
 <body>
@@ -32,7 +33,6 @@
                         id="chevron-fashion-mobile"></i>
                 </div>
                 <div class="dropdown">
-                    <i class="fa-solid fa-chevron-down chevron-icon desktop-chevron" id="chevron-fashion"></i>
                     <div class="fashion-inspiration-dropdown-content" id="dropdown-fashion">
                         <a href="lookbook.html">Lookbook</a>
                         <a href="trends.html">Trends</a>
@@ -47,7 +47,6 @@
                         id="chevron-mixmatch-mobile"></i>
                 </div>
                 <div class="dropdown">
-                    <i class="fa-solid fa-chevron-down chevron-icon desktop-chevron" id="chevron-mixmatch"></i>
                     <div class="mix-match-dropdown-content" id="dropdown-mixmatch">
                         <a href="challenges.html">Challenges</a>
                     </div>
@@ -79,12 +78,50 @@
     </div>
     <div class="lookbook-container">
         <div class="cat-mobile">
-            <div class="button1">
-                <h3>Categories (all)</h3>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
+            <select name="Categories (all)" onchange="filterCategory(this)">
+                <option selected disabled>Categories (All)</option>
+                <optgroup label="Classic Timeless">
+                    <option value="minimalist">Minimalist</option>
+                    <option value="old-money">Old Money</option>
+                </optgroup>
+                <optgroup label="Street & Urban">
+                    <option value="streetwear">Streetwear</option>
+                    <option value="y2k">Y2K</option>
+                    <option value="grunge">Grunge</option>
+                    <option value="skater-style">Skater Style</option>
+                </optgroup>
+                <optgroup label="Feminine & Soft">
+                    <option value="balletcore">Balletcore</option>
+                    <option value="coquette">Coquette</option>
+                    <option value="cottage-core">Cottage Core</option>
+                    <option value="mori-kei">Mori Kei</option>
+                </optgroup>
+                <optgroup label="Edgy & Alternative">
+                    <option value="biker">Biker</option>
+                    <option value="punk">Punk</option>
+                </optgroup>
+                <optgroup label="Vintage & Retro">
+                    <option value="boho-hippie">Boho/Hippie</option>
+                    <option value="light-dark-academia">Light/Dark Academia</option>
+                    <option value="retro">Retro</option>
+                </optgroup>
+                <optgroup label="Seasonal">
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                    <option value="winter">Winter</option>
+                </optgroup>
+                <optgroup label="Occasional">
+                    <option value="casual">Casual</option>
+                    <option value="formal">Formal</option>
+                    <option value="party">Party</option>
+                    <option value="date-night">Date Night</option>
+                </optgroup>
+            </select>
         </div>
+
         <div class="categories">
+            <button data-category="all" class="active">All Categories</button>
             <div class="cat-sub">
                 <h6>Aesthetic categories</h6>
             </div>
@@ -92,41 +129,41 @@
                 <h3>Classic Timeless</h3>
             </div>
             <div class="cat-content">
-                <p>Minimalist</p>
-                <p>Old Money</p>
+                <button data-category="minimalist"> Minimalist</button>
+                <button data-category="old-money">Old Money</button>
             </div>
             <div class="cat-header">
                 <h3>Street &amp; Urban</h3>
             </div>
             <div class="cat-content">
-                <p>Streetwear</p>
-                <p>Y2K</p>
-                <p>Grunge</p>
-                <p>Skater Style</p>
+                <button data-category="streetwear">Streetwear</button>
+                <button data-category="y2k">Y2K</button>
+                <button data-category="grunge">Grunge</button>
+                <button data-category="skater-style">Skater Style</button>
             </div>
             <div class="cat-header">
                 <h3>Feminine &amp; Soft</h3>
             </div>
             <div class="cat-content">
-                <p>Balletcore</p>
-                <p>Coquette</p>
-                <p>Cottage Core</p>
-                <p>Mori Kei</p>
+                <button data-category="balletcore">Balletcore</button>
+                <button data-category="coquette">Coquette</button>
+                <button data-category="cottage-core">Cottage Core</button>
+                <button data-category="mori-kei">Mori Kei</button>
             </div>
             <div class="cat-header">
                 <h3>Edgy &amp; Alternative</h3>
             </div>
             <div class="cat-content">
-                <p>Biker</p>
-                <p>Punk</p>
+                <button data-category="biker">Biker</button>
+                <button data-category="punk">Punk</button>
             </div>
             <div class="cat-header">
                 <h3>Vintage &amp; Retro</h3>
             </div>
             <div class="cat-content">
-                <p>Boho/Hippie</p>
-                <p>Light/Dark Academia</p>
-                <p>Retro</p>
+                <button data-category="boho-hippie">Boho/Hippie</button>
+                <button data-category="light-dark-academia">Light/Dark Academia</button>
+                <button data-category="retro">Retro</button>
             </div>
             <div class="cat-sub">
                 <h6>Others</h6>
@@ -135,71 +172,103 @@
                 <h3>Seasonal</h3>
             </div>
             <div class="cat-content">
-                <p>Spring</p>
-                <p>Summer</p>
-                <p>Fall</p>
-                <p>Winter</p>
+                <button data-category="spring">Spring</button>
+                <button data-category="summer">Summer</button>
+                <button data-category="fall">Fall</button>
+                <button data-category="winter">Winter</button>
             </div>
             <div class="cat-header">
                 <h3>Occasion</h3>
             </div>
             <div class="cat-content">
-                <p>Casual</p>
-                <p>Formal</p>
-                <p>Party</p>
-                <p>Date Night</p>
+                <button data-category="casual">Casual</button>
+                <button data-category="formal">Formal</button>
+                <button data-category="party">Party</button>
+                <button data-category="date-night">Date Night</button>
             </div>
         </div>
 
         <div class="divider"></div>
         <div class="lookbook-pics">
-            <div class="pic1">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic1" data-category="streetwear y2k casual fall">
+                <a href="images/lk1.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 1">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic2">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic2" data-category="streetwear y2k casual spring">
+                <a href="images/lk2.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 2">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic3">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic3" data-category="mori-kei balletcore casual winter">
+                <a href="images/lk3.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 3">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic4">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic4" data-category="streetwear casual fall winter">
+                <a href="images/lk4.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 4">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic5">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic5" data-category="light-dark-academia fall casual retro">
+                <a href="images/lk5.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 5">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic6">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic6" data-category="light-dark-academia coquette date-night fall">
+                <a href="images/lk6.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 6">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic7">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic7" data-category="mori-kei formal spring">
+                <a href="images/lk7.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 7">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic8">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic8" data-category="retro light-dark-academia casual fall">
+                <a href="images/lk8.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 8">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic9">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic9" data-category="skater-style streetwear grunge casual fall">
+                <a href="images/lk9.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 9">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic10">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic10" data-category="y2k coquette casual spring">
+                <a href="images/lk10.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 10">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic11">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic11" data-category="y2k streetwear skater-style casual">
+                <a href="images/lk11.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 11">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic12">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic12" data-category="old-money light-dark-academia formal fall">
+                <a href="images/lk12.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 12">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic13">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic13" data-category="retro streetwear formal fall">
+                <a href="images/lk13.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 13">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic14">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic14" data-category="coquette light-dark-academia spring date-night">
+                <a href="images/lk14.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 14">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic15">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic15" data-category="streetwear casual">
+                <a href="images/lk15.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 15">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
-            <div class="pic16">
-                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <div class="pic16" data-category="y2k coquette casual date-night spring">
+                <a href="images/lk16.png" data-lightbox="lookbook-gallery" data-title="Lookbook Image 16">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </a>
             </div>
         </div>
         <div class="pages-nav">
@@ -240,6 +309,9 @@
         </div>
     </div>
     <script src="javascript/general.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="javascript/lookbook.js"></script>
 </body>
 
 </html>

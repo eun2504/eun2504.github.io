@@ -1,0 +1,261 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-top {
+    width: 100%
+}
+
+.banner-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner-bottom1 {
+    display: flex;
+    width: 55%;
+    justify-content: end;
+}
+
+.banner-bottom2 {
+    display: flex;
+    width: 45%;
+    justify-content: center;
+}
+
+.master {
+    display: flex;
+    width: 43%;
+    justify-content: end;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3vw;
+    color: #023996;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+h4 {
+    font-size: 2.8vw;
+    font-weight: 400;
+    color: #023996;
+    margin: 0;
+}
+
+.essentials-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+    margin: 4vw;
+}
+
+.list {
+    display: flex;
+    height: 30vw;
+}
+
+.top-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.subtitle-vertical-label {
+    order: -1;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    width: 15%;
+}
+
+.label-text {
+    writing-mode: vertical-rl;
+    transform: rotate(0deg);
+    margin-left: 10px;
+}
+
+.label-line {
+    width: 1px;
+    height: 20vw;
+    background-color: #023996;
+}
+
+h3 {
+    font-family: "lexend";
+    font-size: 1.8vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.items {
+    display: flex;
+    width: 85%;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.items.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+.item {
+    width: 35%;
+    position: relative;
+}
+
+.item i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item h1 {
+    font-family: "lexend";
+    font-size: 1.8vw;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.item p {
+    line-height: 18px;
+}
+
+.tips-title {
+    display: flex;
+    justify-content: end;
+}
+
+.tips-content {
+    display: flex;
+    flex-direction: column;
+    margin: 6vw;
+    gap: 9vw;
+}
+
+.boxy,
+.layers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sandwich {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.tip1 {
+    width: 60%;
+}
+
+.tip-text {
+    margin-bottom: 8vw;
+}
+
+.tip-text h2 {
+    font-size: 2vw;
+    font-weight: 450;
+    color: black;
+    margin-bottom: 4vw;
+}
+
+.tip-text p {
+    letter-spacing: .6px;
+    line-height: 25px;
+    font-size: 17px;
+}
+
+.tip-images {
+    display: flex;
+    width: 35%;
+    gap: 6vw;
+}
+
+.tip-images img {
+    width: 100%;
+}
+
+.tip2 {
+    display: flex;
+    justify-content: end;
+    width: 40%;
+}
+
+.sandwich .tip2 {
+    justify-content: start;
+}
+
+.tip2 img {
+    width: 75%;
+    height: auto;
+}
+
+.challenges-button {
+    display: block;
+    text-align: center;
+    padding: 4vw 20vw;
+    margin: 20px auto;
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+.challenges-button h3 {
+    font-size: 5vw;
+    color: #023996;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width:1000px) {
+    .item i {
+        font-size: 15px;
+    }
+
+    .item p {
+        font-size: 1.6vw;
+    }
+
+    .tip-text h2 {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width:768px) {
+    .items {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        cursor: grab;
+    }
+}

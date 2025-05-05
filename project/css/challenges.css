@@ -1,0 +1,43 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.banner-image {
+    width: 50%;
+}
+
+.banner-image img {
+    width: 100%;
+}
+
+.banner-text {
+    width: 50%;
+    text-align: left;
+}
+
+.banner-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 15vw;
+}
+
+h2 {
+    font-size: 3vw;
+    color: #023996;
+    margin: 0;
+    text-align: right;
+    margin-right: 15vw;
+}

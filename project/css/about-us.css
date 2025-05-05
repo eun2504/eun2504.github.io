@@ -100,6 +100,15 @@
     margin-top: 40px;
 }
 
+.get-in-touch a {
+    text-decoration: none;
+    color: black;
+}
+
+.get-in-touch a:hover {
+    text-decoration: underline;
+}
+
 .get-in-touch h4 {
     font-size: 1.5vw;
     font-weight: 550;
