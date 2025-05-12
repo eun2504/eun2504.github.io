@@ -137,8 +137,17 @@
 }
 
 @media (max-width: 768px) {
+    .banner-text h1 {
+        font-size: 10vw;
+    }
+
     .banner-bottom img {
         top: -25px;
+    }
+
+    .banner-image {
+        display: flex;
+        justify-content: right;
     }
 
     .banner-bottom {

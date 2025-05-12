@@ -6,7 +6,11 @@
 .banner-top {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.banner-text h2 {
+    text-align: left;
 }
 
 .banner-image {
@@ -40,4 +44,191 @@ h2 {
     margin: 0;
     text-align: right;
     margin-right: 15vw;
+}
+
+h3 {
+    font-size: 3vw;
+    font-weight: 550;
+    text-transform: uppercase;
+    color: #023996;
+    letter-spacing: 5px;
+}
+
+.divider {
+    color: black;
+    height: 2px;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.weekchal {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    margin: 50px;
+    text-align: center;
+}
+
+.weekchal div {
+    border: 1px solid black;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.weekchal img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.weekchal div h3 {
+    text-align: left;
+}
+
+.weekchal div h4 {
+    font-family: "lexend";
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    font-weight: 600;
+    margin: 0;
+    text-align: right;
+}
+
+.weekchal div p {
+    font-family: "lexend";
+    font-size: 1.2vw;
+    font-weight: 350;
+    text-align: right;
+    letter-spacing: 2px;
+    margin: 5px 0;
+}
+
+.eras {
+    margin: 50px;
+    margin-top: 10vw;
+}
+
+.title {
+    display: flex;
+}
+
+.header {
+    width: 50%;
+}
+
+.subheader {
+    width: 50%;
+}
+
+.header h3 {
+    font-size: 3vw;
+    font-weight: 550;
+    text-transform: uppercase;
+    text-align: right;
+    color: #023996;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.subheader p {
+    font-family: "lexend";
+    font-size: 1.2vw;
+    font-weight: 350;
+    letter-spacing: 2px;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    overflow: hidden;
+}
+
+.imgleft {
+    width: 50%;
+    position: relative;
+}
+
+.imgright {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.era {
+    position: relative;
+}
+
+.era img {
+    width: 100%;
+}
+
+.images h2 {
+    color: white;
+    font-family: "lexend";
+    text-align: center;
+}
+
+.text {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+}
+
+.experiment {
+    margin-top: 10vw;
+}
+
+.experiment-image {
+    display: flex;
+    justify-content: end;
+}
+
+.experiment-content {
+    display: flex;
+    height: fit-content;
+    margin: 50px;
+}
+
+.extitle {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 15%;
+    margin: 0;
+    writing-mode: sideways-lr;
+}
+
+.exprompts {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    width: 95%;
+}
+
+.exprompts h4 {
+    font-size: 2vw;
+    font-family: "lexend";
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.exprompts p {
+    font-size: 1.1vw;
+    font-family: "lexend";
+    letter-spacing: 3px;
+    margin: 0;
+    margin-left: 25%;
+}
+
+@media (max-width:768px) {
+    .banner-top {
+        flex-direction: column-reverse;
+    }
+
 }

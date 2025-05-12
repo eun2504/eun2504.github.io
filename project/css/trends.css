@@ -405,6 +405,10 @@
         justify-self: flex-end;
     }
 
+    .mobile-runway-flip {
+        display: none;
+    }
+
     .runway {
         justify-content: center;
         align-items: center;
@@ -863,8 +867,8 @@
         .cnp-item .img3,
         .cnp-item .img4,
         .cnp-item .img5 {
-            width: 19vw;
-            height: 19vw;
+            width: 18vw;
+            height: 18vw;
         }
 
         .runway-side {
@@ -875,6 +879,10 @@
 
         .reallife-side {
             display: none;
+        }
+
+        .runway h3 {
+            margin: 40px;
         }
 
         .runways {
@@ -954,9 +962,67 @@
             display: none;
         }
 
+        .runway-content {
+            display: none;
+        }
+
+        .mobile-runway-flip {
+            display: block;
+        }
+
+        .flip-card {
+            width: 50vw;
+            height: 100vw;
+            perspective: 1000px;
+            cursor: pointer;
+            position: relative;
+            margin: auto;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card img {
+            width: 100%;
+        }
+
+        .caption {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 550px) {
+        h4 {
+            font-size: 3vw;
+        }
 
         .border-line {
             width: 80%;
@@ -987,16 +1053,17 @@
             left: -17%;
         }
 
-        .runway-text h4 {
-            font-size: 3vw;
+        .cnp-item p {
+            margin-right: 5px;
+
         }
 
         .text h4 {
-            font-size: 4vw;
+            font-size: 5vw;
         }
 
         .text p {
-            font-size: 2.5vw;
+            font-size: 3vw;
             line-height: 1.5;
             word-spacing: 1px;
             text-align: justify;

@@ -60,22 +60,23 @@
         </div>
     </div>
     <div class="banner">
-        <div class="banner=top">
+        <div class="banner-top">
             <div class="banner-image"><img src="images/challengesbanner.jpeg"></div>
             <div class="banner-text">
                 <h2>mix &amp; match</h2>
             </div>
         </div>
-        <div class="banner=bottom">
+        <div class="banner-bottom">
             <h1>Challenges</h1>
             <h2>— fun outfit prompts</h2>
         </div>
+        <div class="divider"></div>
     </div>
 
     <div class="content">
         <div class="weekchal">
             <div class="title">
-                <h3>weekly outfit challenges</h3>
+                <h3>weekly outfit challen<br>ges</h3>
             </div>
             <div>
                 <h4>monochrome mondays</h4>
@@ -83,13 +84,13 @@
                 <img src="images/week1.jpeg">
             </div>
             <div>
-                <h4>texture tuesdays</h4>
+                <h4>texture<br>tuesdays</h4>
                 <p>Mix&match different textures like denim, knit, or leather.</p>
                 <img src="images/week2.jpeg">
             </div>
             <div>
                 <h4>Wildcard Wednesday</h4>
-                <p>Wear something you wouldn't normally pick!</p>
+                <p>Wear something you<br>wouldn't normally pick!</p>
                 <img src="images/week3.jpeg">
             </div>
             <div>
@@ -98,41 +99,64 @@
                 <img src="images/week4.jpeg">
             </div>
             <div>
-                <h4>freestyle friday</h4>
+                <h4>freestyle<br>friday</h4>
                 <p>No rules! Just wear what makes you feel expressive.</p>
                 <img src="images/week5.jpeg">
             </div>
             <div>
-                <h4>statement saturday</h4>
-                <p>Build an outfit around a bold statement piece.</p>
+                <h4>statement<br>saturday</h4>
+                <p>Build an outfit around a<br>bold statement piece.</p>
                 <img src="images/week6.jpeg">
             </div>
             <div>
-                <h4>sustainable sunday</h4>
+                <h4>sustainable<br>sunday</h4>
                 <p> Thrifted, upcycled, or reworked fashion only!</p>
                 <img src="images/week7.jpeg">
             </div>
         </div>
         <div class="eras">
             <div class="title">
-                <p>Try styling outfits inspired by different decades.</p>
-                <h3>style eras</h3>
+                <div class="subheader">
+                    <p>Try styling outfits inspired by different decades.</p>
+                </div>
+                <div class="header">
+                    <h3>style eras</h3>
+                </div>
             </div>
             <div class="images">
                 <div class="imgleft">
-                    <img src="images/1990's.jpeg">
+                    <div class="era">
+                        <div class="text">
+                            <h2>1990's</h2>
+                        </div>
+                        <img src="images/1990's.jpeg">
+                    </div>
                 </div>
                 <div class="imgright">
-                    <img src="images/2000's,jpeg">
-                    <img src="images/2010's.jpeg">
+                    <div class="era">
+                        <div class="text">
+                            <h2>2000's</h2>
+                        </div>
+                        <img src="images/2000's.jpeg">
+                    </div>
+                    <div class="era">
+                        <div class="text">
+                            <h2>2010's</h2>
+                        </div>
+                        <img src="images/2010's.jpeg">
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="experiment">
-            <img src="images/experiment.jpeg">
+            <div class="experiment-image">
+                <img src="images/experiment.jpeg">
+            </div>
             <div class="experiment-content">
-                <h3>style experiments</h3>
+                <div class="extitle">
+                    <h3>style<br>experiments</h3>
+                </div>
                 <div class="exprompts">
                     <div>
                         <h4>Opposite Aesthetic Challenge</h4>
@@ -153,32 +177,34 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <div class="footer-nav-bar">
-            <a href="fashion-inspiration.html">Fashion Inspiration</a>
-            <a href="mix-&amp;-match.html">Mix &amp; Match</a>
-            <a href="thrift-&-diy.html">Thrift &amp; DIY</a>
-            <a href="about-us.html">About Us</a>
-        </div>
-        <div class="footer-copyright">
-            <h4>Closet Collective</h4>
-            <p>© 2025 Closet Collective. Stay stylish.</p>
-        </div>
-        <div class="follow-us">
-            <div class="follow-us-text">
-                <p>Follow Us At</p>
+        <div class="footer">
+            <div class="footer-nav-bar">
+                <a href="fashion-inspiration.html">Fashion Inspiration</a>
+                <a href="mix-&amp;-match.html">Mix &amp; Match</a>
+                <a href="thrift-&-diy.html">Thrift &amp; DIY</a>
+                <a href="about-us.html">About Us</a>
             </div>
-            <div class="social-med">
-                <img src="images/insta.png" alt="Instagram">
-                <img src="images/pinterest.png" alt="Pinterest">
-                <img src="images/tiktok.png" alt="TikTok">
-                <img src="images/youtube.png" alt="Youtube">
+            <div class="footer-copyright">
+                <h4>Closet Collective</h4>
+                <p>© 2025 Closet Collective. Stay stylish.</p>
+            </div>
+            <div class="follow-us">
+                <div class="follow-us-text">
+                    <p>Follow Us At</p>
+                </div>
+                <div class="social-med">
+                    <img src="images/insta.png" alt="Instagram">
+                    <img src="images/pinterest.png" alt="Pinterest">
+                    <img src="images/tiktok.png" alt="TikTok">
+                    <img src="images/youtube.png" alt="Youtube">
+                </div>
             </div>
         </div>
     </div>
     <script src="javascript/general.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 </body>
 
 </html>

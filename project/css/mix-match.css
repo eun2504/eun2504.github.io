@@ -74,14 +74,6 @@ h4 {
 
 .list {
     display: flex;
-    height: 30vw;
-}
-
-.top-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    flex-direction: row;
 }
 
 .subtitle-vertical-label {
@@ -116,8 +108,14 @@ h3 {
     display: flex;
     width: 85%;
     justify-content: space-evenly;
-    gap: 50px;
+    padding-right: 5vw;
 }
+
+.slick-slide {
+    margin: 0 1vw;
+    box-sizing: border-box;
+}
+
 
 .items.dragging {
     cursor: grabbing;
@@ -217,8 +215,7 @@ h3 {
 }
 
 .tip2 img {
-    width: 75%;
-    height: auto;
+    width: 100%;
 }
 
 .challenges-button {
@@ -252,10 +249,67 @@ h3 {
 }
 
 @media (max-width:768px) {
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 4vw;
+    }
+
     .items {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-        cursor: grab;
+        display: block;
+    }
+
+    .item {
+        width: 50%;
+    }
+
+    .item h1 {
+        font-size: 20px;
+    }
+
+    .item p {
+        font-size: 16px;
+    }
+
+    .tip-text h2 {
+        font-size: 25px;
+    }
+
+    .tip-text p {
+        text-align: justify;
+    }
+
+    .boxy,
+    .sandwich,
+    .layers {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .tip1 {
+        width: 100%;
+    }
+
+    .tip2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .tip-images {
+        display: none;
     }
 }
