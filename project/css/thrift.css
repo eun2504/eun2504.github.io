@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.banner-image img {
+    width: 100%;
+}
+
 .bannerleft {
     display: flex;
     flex-direction: column;
@@ -16,6 +20,10 @@
     flex-direction: column;
     width: 50%;
     position: relative;
+}
+
+.mobile-thrift-content {
+    display: none;
 }
 
 .thrift {
@@ -45,9 +53,13 @@
 
 .banner-subheading {
     position: absolute;
-    z-index: 99;
+    z-index: 999;
     bottom: 0;
     right: 0;
+}
+
+.mob {
+    display: none;
 }
 
 .banner-subheading h2 {
@@ -57,6 +69,8 @@
 }
 
 .banner-image {
+    width: 15vw;
+    z-index: 100;
     position: absolute;
     top: 52%;
     right: 20%;
@@ -110,10 +124,12 @@ h4 {
 
 .thrift-save img {
     margin-top: 50%;
+    width: 100%;
 }
 
 .whr-text {
-    padding: 80px 20px 0 20px;
+    padding: 0 1.5vw;
+    padding-top: 5vw;
     font-family: 'josefin sans';
 }
 
@@ -161,6 +177,10 @@ h4 {
 .stussy {
     display: flex;
     justify-content: end;
+}
+
+.stussy img {
+    width: 40%;
 }
 
 .bottom-left h4 {
@@ -231,6 +251,10 @@ h4 {
     margin: 0;
 }
 
+.mobile-upcycle-list {
+    display: none;
+}
+
 .upcycle {
     border-top: 2px solid black;
     margin: 3vw;
@@ -259,6 +283,7 @@ h4 {
 }
 
 .items {
+    display: flex;
     gap: 80px;
     align-items: center;
 }
@@ -316,4 +341,211 @@ h4 {
     font-weight: 600;
     margin: 0;
     word-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+
+    .mobile-thrift-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mob {
+        display: flex;
+    }
+
+    .mobile-thrift-top {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mobile-thrift-top-text {
+        width: 50%;
+    }
+
+    .ttt {
+        position: inherit;
+    }
+
+    .whr-text {
+        padding: 0;
+    }
+
+    h4 {
+        font-size: 4vw;
+        margin: 20px 0;
+    }
+
+    .thrifttip {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+    }
+
+    .whr-text h5 {
+        font-size: 2vw;
+    }
+
+    .whr-text li {
+        font-size: 2vw;
+    }
+
+    .whr-text ul {
+        margin-bottom: 20px;
+    }
+
+    .mobile-thrift-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2vw;
+    }
+
+    .mobile-thrift-bottom-image1,
+    .mobile-thrift-bottom-image2 {
+        width: 48%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+    }
+
+    .mobile-thrift-bottom-image1 img,
+    .mobile-thrift-bottom-image2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .mobile-thrift-content .save-image {
+        width: 50%;
+        margin: 2vw auto;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+    }
+
+    .mobile-thrift-content .save-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .mobile-thrift-content .mobile-thrift-top-text {
+        padding: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .thrift-top {
+        display: none;
+    }
+
+    .thrift-bottom {
+        display: none;
+    }
+
+    .banner-subheading h2 {
+        font-size: 4vw;
+    }
+
+    .thrift h1,
+    .thrift2 h1 {
+        font-size: 10vw;
+    }
+
+    .tip h1 {
+        font-size: 23px;
+    }
+
+    .tip li {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .upcycle {
+        padding-top: 3vw;
+    }
+
+    .upcycle h4 {
+        font-size: 4vw;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .mobile-upcycle-list {
+        display: block;
+        margin: 10vw 0;
+    }
+
+    .mobile-upcycle-list .label {
+        writing-mode: horizontal-tb;
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
+        text-align: center;
+    }
+
+    .mobile-upcycle-list .items {
+        display: flex !important;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 6vw;
+    }
+
+    .mobile-upcycle-list .item p {
+        font-size: 3vw;
+    }
+
+    .sustainable {
+        flex-direction: row
+    }
+
+    .sus1 {
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 5vw;
+        padding-bottom: 4vw;
+        width: 100%;
+    }
+
+    .sus1 h4 {
+        font-size: 5vw;
+        padding-bottom: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    .sus1 img {
+        width: 30%
+    }
+
+    .empty {
+        height: 6vw;
+    }
+
+    .sus2 {
+        display: none;
+    }
+
+    .sus-text {
+        display: none;
+    }
+
+    .mobtext {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mob p,
+    .mob h6 {
+        font-family: 'josefin sans';
+        text-align: justify;
+        font-weight: 500;
+        margin: 0;
+        word-spacing: 1px;
+        font-size: 2.5vw;
+    }
+
+    .bigpic img {
+        width: 100%;
+    }
+
+    .desktop-only {
+        display: none;
+    }
 }

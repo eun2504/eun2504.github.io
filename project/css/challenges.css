@@ -155,15 +155,42 @@ h3 {
     display: flex;
     flex-direction: column;
     width: 50%;
-    flex-wrap: wrap;
+}
+
+.weekchal-slider {
+    display: none;
 }
 
 .era {
     position: relative;
 }
 
-.era img {
+.era1 {
+    background-image: url("../images/era1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
+    height: 60vw;
+
+}
+
+.era2 {
+    background-image: url("../images/era2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30vw;
+}
+
+.era3 {
+    background-image: url("../images/era3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30vw;
 }
 
 .images h2 {
@@ -175,7 +202,7 @@ h3 {
 .text {
     position: absolute;
     left: 40%;
-    top: 50%;
+    top: 40%;
 }
 
 .experiment {
@@ -224,6 +251,7 @@ h3 {
     letter-spacing: 3px;
     margin: 0;
     margin-left: 25%;
+    color: #434343;
 }
 
 @media (max-width:768px) {
@@ -231,4 +259,141 @@ h3 {
         flex-direction: column-reverse;
     }
 
+    .weekchal {
+        display: none;
+    }
+
+    .weekchal-slider {
+        display: block;
+    }
+
+    .weekchal-slider .title {
+        display: flex;
+        justify-self: center;
+        font-size: 1.2rem;
+        margin-bottom: 1vw;
+        border: 3px solid black;
+        width: 60%;
+        padding: 5px;
+    }
+
+    .title h3 {
+        margin: 0;
+    }
+
+    .weekchal-slider .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .weekchal-slider .slide-content {
+        border: 3px solid black;
+        padding: 20px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .weekchal-slider h4 {
+        font-size: 3vw;
+        font-weight: bold;
+        text-align: right;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .weekchal-slider p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+        max-width: 300px;
+    }
+
+    .weekchal-slider img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .weekchal-slider {
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: black !important;
+        z-index: 10;
+    }
+
+    .swiper-button-next {
+        right: 10vw !important;
+    }
+
+    .swiper-button-prev {
+        left: 10vw !important;
+
+    }
+
+    .swiper-container {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .subheader p {
+        font-size: 2vw;
+    }
+
+    .experiment-image {
+        margin: 0 10px;
+    }
+
+    .experiment-image img {
+        width: 100%;
+    }
+
+    .experiment-content {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .extitle {
+        writing-mode: horizontal-tb;
+        margin: 0;
+    }
+
+    .extitle h3 {
+        font-size: 5vw;
+        letter-spacing: 2px;
+    }
+
+    .exprompts {
+        width: 100%;
+    }
+
+    .exprompts h4 {
+        font-size: 2.5vw;
+    }
+
+    .exprompts p {
+        font-size: 2.3vw;
+        margin-left: 5%;
+        letter-spacing: 1px;
+        margin-top: 5px;
+    }
 }

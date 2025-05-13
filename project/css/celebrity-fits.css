@@ -66,6 +66,14 @@
     padding: 50px;
 }
 
+.recreate {
+    width: 75%;
+}
+
+.popout-top .image {
+    width: 60%;
+}
+
 .popout-top {
     display: flex;
     justify-content: center;
