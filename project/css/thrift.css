@@ -268,11 +268,12 @@ h4 {
 
 .upcycle-list {
     display: flex;
-    margin: 100px;
-    justify-content: space-between;
+    margin: 5vw;
+    gap: 2vw
 }
 
 .label {
+    width: 5%;
     writing-mode: sideways-lr;
     text-align: center;
     font-size: 1.5vw;
@@ -283,14 +284,19 @@ h4 {
 }
 
 .items {
+    width: 95%;
     display: flex;
-    gap: 80px;
+    gap: 30px;
     align-items: center;
 }
 
 .item p {
     text-transform: capitalize;
     font-size: 1.2vw;
+}
+
+.item img {
+    width: 100%;
 }
 
 .empty {
