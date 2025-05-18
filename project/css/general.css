@@ -333,9 +333,14 @@ h3 {
     .title-sec {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        gap: 40px;
+        width: 100%;
+    }
+
+    .title-sec a {
+        width: 70%;
+        text-align: left;
+
     }
 
     .sections {

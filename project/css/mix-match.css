@@ -125,6 +125,7 @@ h3 {
 .item {
     width: 35%;
     position: relative;
+    margin: 0 10px;
 }
 
 .item i {
@@ -267,20 +268,25 @@ h3 {
         font-size: 4vw;
     }
 
+    .essentials-content {
+        margin: 20px 0;
+    }
+
     .items {
         display: block;
+        width: 100%;
     }
 
     .item {
-        width: 50%;
+        margin: 0 10px;
     }
 
     .item h1 {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .item p {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .tip-text h2 {

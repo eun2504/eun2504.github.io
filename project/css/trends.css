@@ -594,8 +594,8 @@
         flex-direction: row-reverse;
         align-items: center;
         text-decoration: none;
-        gap: 25px;
-        padding-left: 50px;
+        gap: 5px;
+        padding-left: 40px;
         margin: 10px 0;
     }
 
@@ -622,8 +622,8 @@
         justify-content: end;
         align-items: center;
         text-decoration: none;
-        gap: 25px;
-        padding-right: 50px;
+        gap: 5px;
+        padding-right: 40px;
         margin: 10px 0;
     }
 

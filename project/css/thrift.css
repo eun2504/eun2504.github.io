@@ -251,9 +251,6 @@ h4 {
     margin: 0;
 }
 
-.mobile-upcycle-list {
-    display: none;
-}
 
 .upcycle {
     border-top: 2px solid black;
@@ -286,17 +283,18 @@ h4 {
 .items {
     width: 95%;
     display: flex;
-    gap: 30px;
-    align-items: center;
+    align-items: baseline;
+    justify-content: center;
 }
+
 
 .item p {
     text-transform: capitalize;
-    font-size: 1.2vw;
+    font-size: 15px;
 }
 
 .item img {
-    width: 100%;
+    width: 80%;
 }
 
 .empty {
@@ -356,6 +354,10 @@ h4 {
         flex-direction: column;
     }
 
+    .thrift-content {
+        margin-top: 50px;
+    }
+
     .mob {
         display: flex;
     }
@@ -377,10 +379,13 @@ h4 {
         padding: 0;
     }
 
-    h4 {
-        font-size: 4vw;
-        margin: 20px 0;
+    h4,
+    .sus1 h4 {
+        font-size: 5vw;
+        padding-bottom: 1vw;
+        margin-bottom: 2vw;
     }
+
 
     .thrifttip {
         display: flex;
@@ -389,11 +394,11 @@ h4 {
     }
 
     .whr-text h5 {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .whr-text li {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .whr-text ul {
@@ -455,6 +460,12 @@ h4 {
         font-size: 10vw;
     }
 
+
+    .tip {
+        margin: 50px 0;
+        margin-left: 50px;
+    }
+
     .tip h1 {
         font-size: 23px;
     }
@@ -466,35 +477,6 @@ h4 {
 
     .upcycle {
         padding-top: 3vw;
-    }
-
-    .upcycle h4 {
-        font-size: 4vw;
-        text-align: center;
-        margin: 10px;
-    }
-
-    .mobile-upcycle-list {
-        display: block;
-        margin: 10vw 0;
-    }
-
-    .mobile-upcycle-list .label {
-        writing-mode: horizontal-tb;
-        font-size: 2.5vw;
-        margin-bottom: 2vw;
-        text-align: center;
-    }
-
-    .mobile-upcycle-list .items {
-        display: flex !important;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 6vw;
-    }
-
-    .mobile-upcycle-list .item p {
-        font-size: 3vw;
     }
 
     .sustainable {
@@ -509,14 +491,9 @@ h4 {
         width: 100%;
     }
 
-    .sus1 h4 {
-        font-size: 5vw;
-        padding-bottom: 1vw;
-        margin-bottom: 2vw;
-    }
-
     .sus1 img {
-        width: 30%
+        width: 30%;
+        height: 80%;
     }
 
     .empty {
@@ -524,6 +501,10 @@ h4 {
     }
 
     .sus2 {
+        display: none;
+    }
+
+    .recycle1 {
         display: none;
     }
 
@@ -551,7 +532,4 @@ h4 {
         width: 100%;
     }
 
-    .desktop-only {
-        display: none;
-    }
 }

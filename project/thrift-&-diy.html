@@ -301,7 +301,7 @@
     </div>
     <div class="upcycle">
         <h4>Ways to upcycle</h4>
-        <div class="mobile-upcycle-list mobile-only">
+        <div class="upcycle-list">
             <div class="label">easy diy fixes</div>
             <div class="items">
                 <div class="item">
@@ -322,7 +322,7 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-upcycle-list mobile-only">
+        <div class="upcycle-list">
             <div class="label">customization hacks</div>
             <div class="items">
                 <div class="item">
@@ -343,70 +343,7 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-upcycle-list mobile-only">
-            <div class="label">thrift flips</div>
-            <div class="items">
-                <div class="item">
-                    <p>transforming into a new piece</p>
-                    <img src="images/upcycle9.jpeg">
-                </div>
-                <div class="item">
-                    <div class="empty"></div>
-                    <img src="images/upcycle10.jpeg">
-                </div>
-                <div class="item">
-                    <div class="empty"></div>
-                    <img src="images/upcycle11.jpeg">
-                </div>
-                <div class="item">
-                    <div class="empty"></div>
-                    <img src="images/upcycle12.jpeg">
-                </div>
-            </div>
-        </div>
-        <div class="upcycle-list desktop-only">
-            <div class="label">easy diy fixes</div>
-            <div class="items">
-                <div class="item">
-                    <p>patchworking</p>
-                    <img src="images/upcycle1.jpeg">
-                </div>
-                <div class="item">
-                    <p>cropping</p>
-                    <img src="images/upcycle2.jpeg">
-                </div>
-                <div class="item">
-                    <p>embroidering</p>
-                    <img src="images/upcycle3.jpeg">
-                </div>
-                <div class="item">
-                    <p>distressing</p>
-                    <img src="images/upcycle4.jpeg">
-                </div>
-            </div>
-        </div>
-        <div class="upcycle-list desktop-only">
-            <div class="label">customization hacks</div>
-            <div class="items">
-                <div class="item">
-                    <p>accessorizing</p>
-                    <img src="images/upcycle5.jpeg">
-                </div>
-                <div class="item">
-                    <p>reworking</p>
-                    <img src="images/upcycle6.jpeg">
-                </div>
-                <div class="item">
-                    <p>painting</p>
-                    <img src="images/upcycle7.jpeg">
-                </div>
-                <div class="item">
-                    <p>embellishing</p>
-                    <img src="images/upcycle8.jpeg">
-                </div>
-            </div>
-        </div>
-        <div class="upcycle-list desktop-only">
+        <div class="upcycle-list">
             <div class="label">thrift flips</div>
             <div class="items">
                 <div class="item">
@@ -432,6 +369,7 @@
     <div class="sustainable">
         <div class="sus1">
             <h4>Why sustainable<br>fashion?</h4>
+            <div class="recycle1"><img src="images/recycle.png"></div>
             <div class="mob">
                 <div class="mobtext">
                     <p>Sustainable fashion isn't just a trend—it's a shift in mindset. It's about being more thoughtful
@@ -447,7 +385,7 @@
             </div>
 
         </div>
-        <div class="sus2">=
+        <div class="sus2">
             <img src="images/sustainable.png">
             <div class="sus-text">
                 <p>Sustainable fashion isn't just a trend—it's a shift in mindset. It's about being more thoughtful
@@ -492,10 +430,19 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.mobile-only .items').slick({
-                slidesToShow: 2.5,
+            $('.items').slick({
+                slidesToShow: 4,
                 arrows: false,
-                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2.5,
+                            arrows: false,
+                            infinite: false,
+                        }
+                    }
+                ]
             });
         });
     </script>
