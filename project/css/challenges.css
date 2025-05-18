@@ -259,6 +259,16 @@ h3 {
         flex-direction: column-reverse;
     }
 
+    .banner-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .banner-text h2 {
+        text-align: center;
+        margin: 0;
+    }
+
     .weekchal {
         display: none;
     }
@@ -355,7 +365,9 @@ h3 {
     }
 
     .swiper-container {
-        width: 100%;
+        justify-self: center;
+        width: 85%;
+        margin: 0 10px;
         padding-bottom: 40px;
     }
 

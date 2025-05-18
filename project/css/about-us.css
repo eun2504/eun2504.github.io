@@ -299,6 +299,7 @@
 
     .form-group input,
     .form-group textarea {
+        width: 95%;
         font-size: 0.95rem;
         padding: 0.75rem;
     }

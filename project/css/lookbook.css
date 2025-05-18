@@ -355,6 +355,7 @@ button.active {
 
     .lookbook-pics {
         gap: 20px;
+        justify-content: center;
         margin: 0 40px;
         row-gap: 80px;
     }
